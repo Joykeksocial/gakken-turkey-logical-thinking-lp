@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gakken Turkey">
+  <title>Gakken Turkey</title>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#00a651"/>
+  <text x="32" y="44" text-anchor="middle" font-family="Poppins, system-ui, sans-serif" font-weight="800" font-size="34" letter-spacing="-1" fill="#ffffff">GT</text>
+</svg>

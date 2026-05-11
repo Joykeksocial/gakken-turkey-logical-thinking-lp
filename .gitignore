@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (Tailwind CDN kullanıyoruz, ama node_modules ihtimal)
+node_modules/
+package-lock.json
+
+# Build output (CDN olduğu için yok)
+dist/
+build/
+
+# Secrets — Joykek root kural: .env asla commit edilmez
+.env
+.env.*
+*.token
+
+# Local smoke / temp
+*.log
+.cache/
+.tmp/
+preview/
+preview-*.png
+preview-*.jpg
+
+# Hero original (1920x1282 hi-res — sadece WebP/JPG variants commit edilir)
+assets/hero-original.jpg

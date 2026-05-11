@@ -1,0 +1,192 @@
+/* Gakken Turkey Logical Thinking LP — Custom CSS
+   Bağlam: Tailwind CDN tüketmeyen niş davranışlar (reveal pattern, skip link, modal aç-kapa state, focus ring). */
+
+:root {
+  --color-green-primary: #00a651;
+  --color-green-dark: #057f44;
+  --color-green-med: #277252;
+  --color-green-mint: #92e884;
+  --color-purple-accent: #524d9d;
+  --color-ink-900: #1a1a1a;
+  --color-ink-700: #404040;
+  --color-ink-500: #717070;
+  --color-ink-300: #d4d4d4;
+  --color-ink-100: #f5f5f5;
+  --color-mint-50: #f5fbf7;
+  --color-mint-100: #e8f5ec;
+  --color-error: #c52a2a;
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---- Skip link (WCAG 2.4.1) ---- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1000;
+  background: var(--color-green-primary);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top var(--duration-fast) var(--ease-out);
+}
+.skip-link:focus-visible {
+  top: 1rem;
+  outline: 2px solid var(--color-green-dark);
+  outline-offset: 2px;
+}
+
+/* ---- Reveal pattern (SSR progressive enhancement — feedback_reveal_ssr_progressive_enhancement)
+   Default: visible. JS sonra `data-pending="true"` set ederse hide → IntersectionObserver `is-visible` class ekler.
+   3sn safety timer JS tarafında. */
+.reveal-on-scroll { opacity: 1; transform: none; }
+.reveal-on-scroll[data-pending="true"] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+.reveal-on-scroll[data-pending="true"].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Modal aç-kapa animasyon ---- */
+.modal.is-open {
+  display: block;
+}
+.modal.is-open .modal-backdrop {
+  opacity: 1;
+}
+.modal.is-open .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Body scroll lock ---- */
+body.is-modal-open {
+  overflow: hidden;
+  /* iOS Safari rubber-band fix */
+  position: fixed;
+  width: 100%;
+}
+
+/* ---- Sticky CTA fade-in ---- */
+#sticky-mobile-cta {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: opacity var(--duration-base) var(--ease-out),
+              transform var(--duration-base) var(--ease-out);
+}
+#sticky-mobile-cta.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ---- Custom focus-visible (Tailwind ring yerine net renk) ---- */
+:where(button, a, input, textarea, select):focus-visible {
+  outline: 2px solid var(--color-green-dark);
+  outline-offset: 2px;
+}
+
+/* ---- Form-section scroll anchor offset ---- */
+#form-section { scroll-margin-top: 1.5rem; }
+
+/* ---- Logo wall hover (grayscale → renkli) ---- */
+.logo-wall-item {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter var(--duration-base) var(--ease-out),
+              opacity var(--duration-base) var(--ease-out);
+}
+.logo-wall-item:hover,
+.logo-wall-item:focus-visible {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ---- Smooth scroll prefers-reduced-motion ---- */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal-on-scroll[data-pending="true"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---- Custom utility (Tailwind safe — namespace clash riski yok) ---- */
+.text-balance { text-wrap: balance; }
+
+/* ---- iOS safe area (sticky CTA) ---- */
+.safe-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* ---- Form input — Tailwind dışı brand renk override ---- */
+.form-input {
+  background: var(--color-ink-100);
+  border: 1px solid var(--color-ink-300);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  color: var(--color-ink-900);
+  transition: background var(--duration-fast),
+              border-color var(--duration-fast);
+}
+.form-input:focus {
+  background: #fff;
+  border-color: var(--color-green-dark);
+  outline: none;
+}
+.form-input.has-error {
+  border-color: var(--color-error);
+  border-width: 2px;
+}
+
+/* ---- Error mesajları ---- */
+.form-error {
+  color: var(--color-error);
+  font-size: 0.875rem;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  margin-top: 0.25rem;
+  display: none;
+}
+.form-error.is-visible { display: block; }
+
+/* ---- Logo wall grid item — ortalama ---- */
+.logo-wall-item img,
+.logo-wall-item svg {
+  max-width: 100%;
+  width: auto;
+  height: 48px;
+  display: block;
+}
+
+/* ---- Webinar card BİRİNCİL ribbon ---- */
+.webinar-card.is-primary {
+  box-shadow: 0 0 0 2px var(--color-green-primary), 0 4px 16px -2px rgb(0 0 0 / 0.08);
+}
+.webinar-card.is-primary .primary-ribbon { display: inline-flex; }
+.webinar-card .primary-ribbon { display: none; }
+
+/* ---- Animation: subtle counter / hover ---- */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.is-loading { animation: pulse-soft 1.2s ease-in-out infinite; }
