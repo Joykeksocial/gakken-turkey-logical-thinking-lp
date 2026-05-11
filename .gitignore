@@ -29,6 +29,7 @@ build/
 preview/
 preview-*.png
 preview-*.jpg
+slice-*.png
 
 # Hero original (1920x1282 hi-res — sadece WebP/JPG variants commit edilir)
 assets/hero-original.jpg
