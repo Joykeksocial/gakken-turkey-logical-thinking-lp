@@ -96,13 +96,45 @@
   <!-- Skip link (WCAG 2.4.1) -->
   <a class="skip-link" href="#main">İçeriğe geç</a>
 
-  <!-- Header — sade, sticky DEĞİL (design_system.md §6) -->
-  <header class="bg-white">
-    <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 py-5 lg:py-6 flex items-center">
-      <a href="#hero" aria-label="Gakken Turkey — sayfa başına dön">
-        <img src="assets/logo-gakken-turkey.svg" alt="Gakken Turkey" width="140" height="40" class="h-9 lg:h-10 w-auto">
+  <!-- Header — sticky + anchor menü (Yunus 2026-05-11 revize: 5 anchor + 1 CTA) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-ink-300">
+    <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 py-3 lg:py-4 flex items-center justify-between gap-4">
+      <a href="#hero" aria-label="Gakken Turkey — sayfa başına dön" class="flex-shrink-0">
+        <img src="assets/logo-gakken-turkey.svg" alt="Gakken Turkey" width="140" height="40" class="h-8 lg:h-10 w-auto">
       </a>
+
+      <!-- Desktop nav (lg+) -->
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-9" aria-label="Ana navigasyon">
+        <a href="#growth-wall" data-action="scroll" data-target="#growth-wall" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Neden</a>
+        <a href="#global-std" data-action="scroll" data-target="#global-std" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Yaklaşım</a>
+        <a href="#neden-gt" data-action="scroll" data-target="#neden-gt" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Gakken</a>
+        <a href="#vaka-logo" data-action="scroll" data-target="#vaka-logo" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Vakalar</a>
+        <a href="#format" data-action="scroll" data-target="#format" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Eğitimler</a>
+        <a href="#form-section" data-action="scroll" data-target="#form-section" class="inline-flex items-center gap-1.5 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-[15px] px-5 py-2.5 rounded-xl shadow-cta transition-colors min-h-[40px]" aria-label="Bilgi al — form bölümüne git">
+          Bilgi Al
+        </a>
+      </nav>
+
+      <!-- Mobile actions (lg-altı) -->
+      <div class="flex lg:hidden items-center gap-2">
+        <a href="#form-section" data-action="scroll" data-target="#form-section" class="inline-flex items-center bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-sm px-4 py-2 rounded-lg min-h-[40px]">Bilgi Al</a>
+        <button type="button" id="mobile-menu-toggle" class="w-10 h-10 flex items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 transition-colors" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="menu-icon-open" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg id="menu-icon-close" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
     </div>
+
+    <!-- Mobile drawer (kapalı default) -->
+    <nav id="mobile-menu" class="hidden lg:hidden bg-white border-t border-ink-300" aria-label="Mobil navigasyon">
+      <ul class="max-w-page-w mx-auto px-4 sm:px-6 py-3 space-y-1">
+        <li><a href="#growth-wall" data-action="scroll" data-target="#growth-wall" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Neden</a></li>
+        <li><a href="#global-std" data-action="scroll" data-target="#global-std" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Yaklaşım</a></li>
+        <li><a href="#neden-gt" data-action="scroll" data-target="#neden-gt" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Gakken</a></li>
+        <li><a href="#vaka-logo" data-action="scroll" data-target="#vaka-logo" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Vakalar</a></li>
+        <li><a href="#format" data-action="scroll" data-target="#format" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Eğitimler</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
@@ -1071,6 +1103,7 @@
 
   <!-- ===== Scripts (defer load order) ===== -->
   <script defer src="scripts/modal.js"></script>
+  <script defer src="scripts/nav.js"></script>
   <script defer src="scripts/cta.js"></script>
   <script defer src="scripts/form.js"></script>
   <script defer src="scripts/reveal.js"></script>

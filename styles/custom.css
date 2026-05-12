@@ -96,8 +96,24 @@ body.is-modal-open {
   outline-offset: 2px;
 }
 
-/* ---- Form-section scroll anchor offset ---- */
-#form-section { scroll-margin-top: 1.5rem; }
+/* ---- Sticky header + scroll-margin-top (anchor menü için zorunlu)
+   Header yüksekliği: mobile ~64px, desktop ~72px → scroll hedef section
+   altına gizlenmesin diye scroll-margin-top tüm anchor section'larda. */
+:where(#hero, #growth-wall, #why-wall, #global-std, #neden-gt, #gt-program,
+       #degisim, #vaka-logo, #format, #form-section) {
+  scroll-margin-top: 72px;
+}
+@media (max-width: 1023px) {
+  :where(#hero, #growth-wall, #why-wall, #global-std, #neden-gt, #gt-program,
+         #degisim, #vaka-logo, #format, #form-section) {
+    scroll-margin-top: 64px;
+  }
+}
+
+/* ---- Mobile drawer açık state ---- */
+#mobile-menu.is-open {
+  display: block;
+}
 
 /* ---- Logo wall hover (grayscale → renkli) ---- */
 .logo-wall-item {
