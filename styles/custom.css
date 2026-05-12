@@ -124,7 +124,16 @@ body.is-modal-open {
     display: flex !important;
     align-items: center;
     justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    color: var(--color-ink-700);
+    background: transparent;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
   }
+  #mobile-menu-toggle:hover { background: var(--color-ink-100); }
+  #mobile-menu-toggle svg { width: 1.625rem; height: 1.625rem; }
   header nav[aria-label="Ana navigasyon"] { display: none !important; }
 }
 @media (min-width: 1024px) {
