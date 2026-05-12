@@ -115,14 +115,11 @@
         </a>
       </nav>
 
-      <!-- Mobile actions (lg-altı) -->
-      <div class="flex lg:hidden items-center gap-2">
-        <a href="#form-section" data-action="scroll" data-target="#form-section" class="inline-flex items-center bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-sm px-4 py-2 rounded-lg min-h-[40px]">Bilgi Al</a>
-        <button type="button" id="mobile-menu-toggle" class="w-10 h-10 flex items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 transition-colors" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
-          <svg id="menu-icon-open" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          <svg id="menu-icon-close" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden"><path d="M18 6 6 18M6 6l12 12"/></svg>
-        </button>
-      </div>
+      <!-- Mobile hamburger toggle (lg-altı — CTA drawer içinde) -->
+      <button type="button" id="mobile-menu-toggle" class="flex lg:hidden w-11 h-11 items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 transition-colors" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="menu-icon-open" aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg id="menu-icon-close" aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
     </div>
 
     <!-- Mobile drawer (kapalı default) -->
@@ -133,6 +130,9 @@
         <li><a href="#neden-gt" data-action="scroll" data-target="#neden-gt" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Gakken</a></li>
         <li><a href="#vaka-logo" data-action="scroll" data-target="#vaka-logo" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Vakalar</a></li>
         <li><a href="#format" data-action="scroll" data-target="#format" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Eğitimler</a></li>
+        <li class="pt-2 pb-1">
+          <a href="#form-section" data-action="scroll" data-target="#form-section" data-close-menu class="flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-base px-5 py-3 rounded-xl shadow-cta transition-colors min-h-[48px]">Bilgi Al →</a>
+        </li>
       </ul>
     </nav>
   </header>
