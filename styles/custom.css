@@ -115,6 +115,24 @@ body.is-modal-open {
   display: block;
 }
 
+/* ---- Mobile-only / desktop-only fallback (Tailwind CDN JIT race koruması) ----
+   Bağlam: Edge headless screenshot + bazı tarayıcılarda Tailwind CDN script
+   yüklenme süresi nedeniyle `flex lg:hidden` class'lar geç uygulanabilir.
+   Bu CSS fallback hamburger toggle'ın anlık görünürlüğünü garanti eder. */
+@media (max-width: 1023.98px) {
+  #mobile-menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav[aria-label="Ana navigasyon"] { display: none !important; }
+}
+@media (min-width: 1024px) {
+  #mobile-menu-toggle { display: none !important; }
+  #mobile-menu { display: none !important; }
+  header nav[aria-label="Ana navigasyon"] { display: flex !important; }
+}
+
 /* ---- Logo wall hover (grayscale → renkli) ---- */
 .logo-wall-item {
   filter: grayscale(100%);
