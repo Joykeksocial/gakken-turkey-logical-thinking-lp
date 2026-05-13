@@ -110,9 +110,9 @@
         <a href="#manifesto" data-action="scroll" data-target="#manifesto" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Neden Gakken</a>
         <a href="#yorumlar" data-action="scroll" data-target="#yorumlar" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Yorumlar</a>
         <a href="#vaka" data-action="scroll" data-target="#vaka" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Vaka</a>
-        <a href="#kayit" data-action="scroll" data-target="#kayit" class="inline-flex items-center gap-1.5 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-[15px] px-5 py-2.5 rounded-xl shadow-cta transition-colors min-h-[40px]" aria-label="Bilgi al — kayıt bölümüne git">
+        <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="header" aria-haspopup="dialog" class="inline-flex items-center gap-1.5 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-[15px] px-5 py-2.5 rounded-xl shadow-cta transition-colors min-h-[40px]" aria-label="Bilgi al — form penceresini aç">
           Bilgi Al
-        </a>
+        </button>
       </nav>
 
       <!-- Mobile hamburger toggle (lg-altı — CTA drawer içinde) -->
@@ -130,7 +130,7 @@
         <li><a href="#yorumlar" data-action="scroll" data-target="#yorumlar" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Yorumlar</a></li>
         <li><a href="#vaka" data-action="scroll" data-target="#vaka" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Vaka</a></li>
         <li class="pt-2 pb-1">
-          <a href="#kayit" data-action="scroll" data-target="#kayit" data-close-menu class="flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-base px-5 py-3 rounded-xl shadow-cta transition-colors min-h-[48px]">Bilgi Al →</a>
+          <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="mobile-drawer" data-close-menu aria-haspopup="dialog" class="w-full flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-base px-5 py-3 rounded-xl shadow-cta transition-colors min-h-[48px]">Bilgi Al →</button>
         </li>
       </ul>
     </nav>
@@ -164,8 +164,9 @@
               </button>
               <button type="button"
                 class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint-50 text-brand-green-dark border-2 border-brand-green-dark font-sans font-semibold text-lg px-8 py-4 rounded-xl transition-colors duration-150 ease-out-soft min-h-[48px]"
-                data-action="scroll" data-target="#kayit"
-                aria-label="Bilgi alın — kayıt bölümüne git">
+                data-action="open-modal" data-modal="lead-form-modal" data-source="hero"
+                aria-haspopup="dialog"
+                aria-label="Bilgi alın — form penceresini aç">
                 Bilgi Alın
               </button>
             </div>
@@ -1331,7 +1332,7 @@
 
   <!-- ===== Sticky Mobile CTA ===== -->
   <div id="sticky-mobile-cta" class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t border-ink-300 shadow-[0_-4px_16px_-2px_rgba(0,0,0,0.08)] p-3 safe-bottom" role="region" aria-label="Hızlı erişim — kayıt bölümüne git">
-    <button type="button" class="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-base px-6 py-3 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[44px]" data-action="scroll" data-target="#kayit">
+    <button type="button" class="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-base px-6 py-3 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[44px]" data-action="open-modal" data-modal="lead-form-modal" data-source="sticky-mobile" aria-haspopup="dialog">
       Bilgi Al — Kontenjan Sınırlı
     </button>
   </div>
