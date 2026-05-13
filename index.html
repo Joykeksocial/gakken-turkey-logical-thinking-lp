@@ -187,27 +187,29 @@
             </ul>
           </div>
 
-          <!-- Hero görsel — typography-layered composite (base Unsplash + brand overlay) -->
-          <div class="lg:col-span-5 relative aspect-[4/5] sm:aspect-[16/12] lg:aspect-[4/5] rounded-2xl overflow-hidden bg-ink-900 shadow-card">
+          <!-- Hero görsel — full-bleed sağ + soft left mask + bottom gradient (Seki 2026-05-13 görsel enginlik) -->
+          <div class="lg:col-span-5 relative aspect-[4/5] sm:aspect-[16/12] lg:aspect-auto lg:self-stretch lg:min-h-[560px] rounded-2xl lg:rounded-l-3xl lg:rounded-r-none overflow-hidden bg-ink-900 shadow-card">
             <picture>
-              <source type="image/webp" srcset="assets/hero-640.webp 640w, assets/hero-1280.webp 1280w, assets/hero-1920.webp 1920w" sizes="(min-width: 1024px) 42vw, 100vw">
+              <source type="image/webp" srcset="assets/hero-640.webp 640w, assets/hero-1280.webp 1280w, assets/hero-1920.webp 1920w" sizes="(min-width: 1024px) 50vw, 100vw">
               <img src="assets/hero-1280.jpg"
                    alt="Genç profesyonellerin stratejik toplantısı — modern global ofis ortamı"
                    width="1280" height="855"
                    loading="eager" fetchpriority="high"
-                   class="w-full h-full object-cover opacity-65">
+                   class="w-full h-full object-cover">
             </picture>
-            <!-- Brand overlay gradient -->
-            <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-br from-ink-900/85 via-brand-green-dark/40 to-ink-900/70"></div>
+            <!-- Soft beyaz-to-saydam mask (desktop sol kenar — text-image yumuşak geçiş) -->
+            <div aria-hidden="true" class="hidden lg:block absolute inset-y-0 left-0 w-24 xl:w-32 bg-gradient-to-r from-white via-white/50 to-transparent"></div>
+            <!-- Bottom dark gradient (typography overlay legibility) -->
+            <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-ink-900/85 via-ink-900/40 to-transparent"></div>
             <!-- Typography layered kavram listesi -->
-            <div class="absolute inset-0 flex flex-col justify-end p-6 lg:p-8 z-10">
+            <div class="absolute inset-x-0 bottom-0 flex flex-col p-6 lg:p-8 z-10">
               <ul class="space-y-2 lg:space-y-3 font-sans">
                 <li class="text-white font-bold text-2xl lg:text-3xl leading-tight">Logical Thinking</li>
                 <li class="text-mint-100 font-semibold text-xl lg:text-2xl leading-tight">Critical Thinking</li>
                 <li class="text-white/85 font-medium text-lg lg:text-xl leading-tight">Better Decisions</li>
                 <li class="text-white/70 font-medium text-base lg:text-lg leading-tight">Stronger Execution</li>
               </ul>
-              <p class="mt-6 pt-5 border-t border-white/20 font-body text-xs lg:text-sm text-white/70 italic">
+              <p class="mt-6 pt-5 border-t border-white/20 font-body text-xs lg:text-sm text-white/80 italic">
                 Gakken Turkey · Global Business Program
               </p>
             </div>
@@ -761,7 +763,7 @@
 
             <!-- Eğitmen mini-blok (İrem 2026-05-13 talimatı: Mr. Serkut) -->
             <div class="mt-7 pt-7 border-t border-mint-100 flex items-start gap-4">
-              <div aria-hidden="true" class="flex-shrink-0 w-14 h-14 rounded-full bg-brand-green-dark text-white font-sans font-bold text-lg flex items-center justify-center">SK</div>
+              <img src="assets/portraits/serkut-kizanlikli.jpg" alt="M. Serkut Kızanlıklı portresi" width="56" height="56" loading="lazy" class="flex-shrink-0 w-14 h-14 rounded-full object-cover">
               <div>
                 <p class="font-sans font-semibold text-base text-ink-900">M. Serkut Kızanlıklı</p>
                 <p class="font-body text-sm text-ink-700 leading-relaxed mt-0.5">Gakken Turkey baş eğitmen · ICF PCC + EMCC Senior Practitioner Mentor · 27 ülke deneyim</p>
@@ -832,7 +834,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-on-scroll">
 
-          <!-- Kart 1 — Yasushi Otomo (Gakken official vaka slaytı 2026-05-13 birebir) -->
+          <!-- Kart 1 — Yuki Otomo (Gakken-dan gelen foto dosya adı esas alındı 2026-05-13) -->
           <article class="bg-white rounded-2xl p-6 lg:p-7 shadow-card flex flex-col">
             <span aria-hidden="true" class="text-brand-green-dark mb-4">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
@@ -841,15 +843,15 @@
               "Mantıksal düşünme sayesinde ortak bir dil oluşturduk. Bu sayede, farklı departmanlardaki çalışanlarımızın iletişimi iyileşti ve daha etkili iş sonuçlarına ulaşmamızı sağladı."
             </blockquote>
             <div class="mt-6 pt-5 border-t border-ink-300 flex items-center gap-4">
-              <div aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-green-dark text-white font-sans font-bold text-base flex items-center justify-center">YO</div>
+              <img src="assets/portraits/yuki-otomo.jpg" alt="Yuki Otomo portresi" width="48" height="48" loading="lazy" class="flex-shrink-0 w-12 h-12 rounded-full object-cover">
               <div>
-                <p class="font-sans font-semibold text-base text-ink-900">Yasushi Otomo</p>
+                <p class="font-sans font-semibold text-base text-ink-900">Yuki Otomo</p>
                 <p class="font-body text-sm text-ink-500">CEO · YANMAR Türkiye</p>
               </div>
             </div>
           </article>
 
-          <!-- Kart 2 — Tuğçe Kurt (Gakken official vaka slaytı 2026-05-13 birebir) -->
+          <!-- Kart 2 — Tuğçe Uyanık (Gakken-dan gelen foto dosya adı esas alındı 2026-05-13) -->
           <article class="bg-white rounded-2xl p-6 lg:p-7 shadow-card flex flex-col">
             <span aria-hidden="true" class="text-brand-green-dark mb-4">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
@@ -858,9 +860,9 @@
               "Eğitim son derece pratikti ve işimize hemen yansıdı. Tüm ekip olarak aynı çerçevede çalışabilmemiz, daha net ve etkili bir iş birliği mümkün kıldı."
             </blockquote>
             <div class="mt-6 pt-5 border-t border-ink-300 flex items-center gap-4">
-              <div aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-green-dark text-white font-sans font-bold text-base flex items-center justify-center">TK</div>
+              <img src="assets/portraits/tugce-uyanik.jpg" alt="Tuğçe Uyanık portresi" width="48" height="48" loading="lazy" class="flex-shrink-0 w-12 h-12 rounded-full object-cover">
               <div>
-                <p class="font-sans font-semibold text-base text-ink-900">Tuğçe Kurt</p>
+                <p class="font-sans font-semibold text-base text-ink-900">Tuğçe Uyanık</p>
                 <p class="font-body text-sm text-ink-500">Management Systems Group Manager · YANMAR Türkiye</p>
               </div>
             </div>
@@ -875,7 +877,7 @@
               "Gakken'e 'şöyle bir ihtiyacımız var, nasıl yaparız?' dediğimizde, kendileri Genchi Genbutsu yaparak sorunu yerinde anlayıp buna yönelik eğitimler geliştirebiliyor."
             </blockquote>
             <div class="mt-6 pt-5 border-t border-ink-300 flex items-center gap-4">
-              <div aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-green-dark text-white font-sans font-bold text-base flex items-center justify-center">RU</div>
+              <img src="assets/portraits/ramazan-ugur.jpg" alt="Ramazan Uğur portresi" width="48" height="48" loading="lazy" class="flex-shrink-0 w-12 h-12 rounded-full object-cover">
               <div>
                 <p class="font-sans font-semibold text-base text-ink-900">Ramazan Uğur</p>
                 <p class="font-body text-sm text-ink-500">İşe Alım ve Eğitim Kıdemli Sorumlusu · Dunlop Türkiye</p>
@@ -1022,9 +1024,9 @@
               Mantıksal düşünme sayesinde ortak bir dil oluşturduk. Bu sayede, farklı departmanlardaki çalışanlarımızın iletişimi iyileşti ve daha etkili iş sonuçlarına ulaşmamızı sağladı.
             </blockquote>
             <div class="mt-7 pt-5 border-t border-ink-300 flex items-center gap-4">
-              <div aria-hidden="true" class="flex-shrink-0 w-14 h-14 rounded-full bg-brand-green-dark text-white font-sans font-bold text-base flex items-center justify-center">YO</div>
+              <img src="assets/portraits/yuki-otomo.jpg" alt="Yuki Otomo portresi" width="56" height="56" loading="lazy" class="flex-shrink-0 w-14 h-14 rounded-full object-cover">
               <div>
-                <p class="font-sans font-semibold text-base text-ink-900">Yasushi Otomo</p>
+                <p class="font-sans font-semibold text-base text-ink-900">Yuki Otomo</p>
                 <p class="font-body text-sm text-ink-500">CEO · YANMAR Türkiye Makine A.Ş.</p>
               </div>
             </div>
