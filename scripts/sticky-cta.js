@@ -1,4 +1,8 @@
-/* sticky-cta.js — Mobil sticky bottom CTA bar: Hero geçilince görün, form yakını gizlen */
+/* sticky-cta.js — Mobil sticky bottom CTA bar: Hero geçilince görün, form yakını gizlen
+ * 2026-05-13 fix: Hedef #kayit (tüm Blok 11) → #lead-form-inline (sadece form).
+ * Eski davranışta Blok 11 ROI Outcome strip viewport'a girer girmez sticky
+ * gizleniyordu (form çok aşağıda olmasına rağmen); yeni davranışta gerçek
+ * form input'u ekrana gelene kadar sticky görünür kalır. */
 (function () {
   'use strict';
 
@@ -9,7 +13,7 @@
   function isMobile() { return window.innerWidth < 1024; }
 
   const heroEl = document.getElementById('hero');
-  const formEl = document.getElementById('kayit');
+  const formEl = document.getElementById('lead-form-inline');
   const footerEl = document.querySelector('footer');
 
   if (!heroEl || !formEl) return;
@@ -24,7 +28,7 @@
       sticky.classList.remove('is-visible');
       return;
     }
-    // Görünür: Hero çıkmış + form henüz görünmüyor + footer da görünmüyor
+    // Görünür: Hero çıkmış + form input'u henüz görünmüyor + footer da görünmüyor
     if (!heroVisible && !formVisible && !footerVisible) {
       sticky.classList.add('is-visible');
     } else {
