@@ -36,7 +36,7 @@
   <!-- Google Fonts: Poppins (heading/CTA) + IBM Plex Sans (body/form) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/hero-1920.webp" imagesrcset="assets/hero-640.webp 640w, assets/hero-1280.webp 1280w, assets/hero-1920.webp 1920w" imagesizes="(min-width: 1024px) 50vw, 100vw">
+  <link rel="preload" as="image" href="assets/hero-1280.jpg" imagesrcset="assets/hero-640.jpg 640w, assets/hero-1280.jpg 1280w, assets/hero-1920.jpg 1920w" imagesizes="(min-width: 1024px) 62vw, 100vw">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;700&display=swap">
 
   <!-- Tailwind CDN + Inline config (design_system.md §10 preset) -->
@@ -138,83 +138,87 @@
 
   <main id="main">
 
-    <!-- ===== BLOK 1 — HERO (Cinematic Positioning) ===== -->
-    <section id="hero" aria-labelledby="hero-h1" class="relative bg-white py-10 lg:py-20 overflow-hidden">
-      <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 relative">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          <div class="lg:col-span-7 space-y-7">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-mint-100 text-brand-green-dark font-sans text-xs font-bold uppercase tracking-widest reveal-on-scroll">
-              <span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-green-dark"></span>
-              Türkiye'de İlk ve Tek
-            </span>
-            <h1 id="hero-h1" class="font-sans font-bold text-[clamp(2rem,4vw+1rem,3.5rem)] leading-[1.05] text-ink-900 text-balance reveal-on-scroll">
-              <span class="block text-brand-green-dark">GLOBAL STANDART.</span>
-              <span class="block">TÜRKİYE'NİN GELECEĞİ.</span>
-            </h1>
-            <p class="font-sans text-lg lg:text-xl text-ink-700 leading-relaxed max-w-2xl reveal-on-scroll">
-              Global şirketlerin ortak dilini, Türkiye'nin geleceğine taşıyoruz. <strong class="text-ink-900">Logical Thinking</strong> artık Türkiye'de — Gakken ile.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 reveal-on-scroll">
-              <button type="button"
-                class="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-lg px-8 py-4 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[48px]"
-                data-action="scroll" data-target="#program"
-                aria-label="Programı keşfedin — Program bölümüne git">
-                Programı Keşfedin
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-              </button>
-              <button type="button"
-                class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint-50 text-brand-green-dark border-2 border-brand-green-dark font-sans font-semibold text-lg px-8 py-4 rounded-xl transition-colors duration-150 ease-out-soft min-h-[48px]"
-                data-action="open-modal" data-modal="lead-form-modal" data-source="hero"
-                aria-haspopup="dialog"
-                aria-label="Bilgi alın — form penceresini aç">
-                Bilgi Alın
-              </button>
-            </div>
-            <!-- Trust mini-stat 3 satır -->
-            <ul class="flex flex-wrap gap-x-6 gap-y-3 pt-7 border-t border-ink-300 max-w-2xl reveal-on-scroll" aria-label="Program özellikleri">
-              <li class="flex items-center gap-2 font-body text-sm text-ink-700">
-                <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                Kontenjanlı
-              </li>
-              <li class="flex items-center gap-2 font-body text-sm text-ink-700">
-                <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                Global Standartlarda
-              </li>
-              <li class="flex items-center gap-2 font-body text-sm text-ink-700">
-                <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                Türkiye'de İlk ve Tek
-              </li>
-            </ul>
-          </div>
+    <!-- ===== BLOK 1 — HERO (Seki 2026-05-13 ref: full-bleed image + sol white fade + bottom-right card) ===== -->
+    <section id="hero" aria-labelledby="hero-h1" class="relative bg-white overflow-hidden lg:min-h-[640px]">
 
-          <!-- Hero görsel — full-bleed sağ + soft left mask + bottom gradient (Seki 2026-05-13 görsel enginlik) -->
-          <div class="lg:col-span-5 relative aspect-[4/5] sm:aspect-[16/12] lg:aspect-auto lg:self-stretch lg:min-h-[560px] rounded-2xl lg:rounded-l-3xl lg:rounded-r-none overflow-hidden bg-ink-900 shadow-card">
-            <picture>
-              <source type="image/webp" srcset="assets/hero-640.webp 640w, assets/hero-1280.webp 1280w, assets/hero-1920.webp 1920w" sizes="(min-width: 1024px) 50vw, 100vw">
-              <img src="assets/hero-1280.jpg"
-                   alt="Genç profesyonellerin stratejik toplantısı — modern global ofis ortamı"
-                   width="1280" height="855"
-                   loading="eager" fetchpriority="high"
-                   class="w-full h-full object-cover">
-            </picture>
-            <!-- Soft beyaz-to-saydam mask (desktop sol kenar — text-image yumuşak geçiş) -->
-            <div aria-hidden="true" class="hidden lg:block absolute inset-y-0 left-0 w-24 xl:w-32 bg-gradient-to-r from-white via-white/50 to-transparent"></div>
-            <!-- Bottom dark gradient (typography overlay legibility) -->
-            <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-ink-900/85 via-ink-900/40 to-transparent"></div>
-            <!-- Typography layered kavram listesi -->
-            <div class="absolute inset-x-0 bottom-0 flex flex-col p-6 lg:p-8 z-10">
-              <ul class="space-y-2 lg:space-y-3 font-sans">
-                <li class="text-white font-bold text-2xl lg:text-3xl leading-tight">Logical Thinking</li>
-                <li class="text-mint-100 font-semibold text-xl lg:text-2xl leading-tight">Critical Thinking</li>
-                <li class="text-white/85 font-medium text-lg lg:text-xl leading-tight">Better Decisions</li>
-                <li class="text-white/70 font-medium text-base lg:text-lg leading-tight">Stronger Execution</li>
-              </ul>
-              <p class="mt-6 pt-5 border-t border-white/20 font-body text-xs lg:text-sm text-white/80 italic">
-                Gakken Turkey · Global Business Program
-              </p>
-            </div>
+      <!-- DESKTOP: Image absolute right (60% genişlik, viewport sağ kenarına dayalı) -->
+      <div aria-hidden="true" class="hidden lg:block absolute inset-y-0 right-0 w-[62%] xl:w-[58%] z-0">
+        <picture>
+          <source media="(min-width: 1536px)" srcset="assets/hero-1920.jpg">
+          <img src="assets/hero-1280.jpg"
+               alt=""
+               class="w-full h-full object-cover">
+        </picture>
+        <!-- Soft beyaz fade sol kenardan içeriye (text-image yumuşak geçiş — Seki "yumuşak maskeleme") -->
+        <div aria-hidden="true" class="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-white via-white/85 to-transparent"></div>
+      </div>
+
+      <!-- MOBILE: Image inline üstte (aspect-bounded) -->
+      <div class="lg:hidden relative aspect-[16/11] sm:aspect-[16/9] overflow-hidden">
+        <picture>
+          <source media="(min-width: 640px)" srcset="assets/hero-1280.jpg">
+          <img src="assets/hero-640.jpg"
+               alt="Modern toplantı odasında kurumsal eğitim sunumu — yöneticiler ve uzmanlar"
+               width="640" height="427"
+               loading="eager" fetchpriority="high"
+               class="w-full h-full object-cover">
+        </picture>
+        <!-- Mobile bottom white fade (image-content yumuşak geçiş) -->
+        <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
+      </div>
+
+      <!-- Content (left ~48% on lg, full on mobile) -->
+      <div class="relative max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 py-10 lg:py-24 z-[2]">
+        <div class="lg:max-w-[48%] xl:max-w-[46%] space-y-7">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-mint-100 text-brand-green-dark font-sans text-xs font-bold uppercase tracking-widest reveal-on-scroll">
+            <span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-green-dark"></span>
+            Türkiye'de İlk ve Tek
+          </span>
+          <h1 id="hero-h1" class="font-sans font-bold text-[clamp(2rem,4vw+1rem,3.5rem)] leading-[1.05] text-ink-900 text-balance reveal-on-scroll">
+            <span class="block text-brand-green-dark">GLOBAL STANDART.</span>
+            <span class="block">TÜRKİYE'NİN GELECEĞİ.</span>
+          </h1>
+          <p class="font-sans text-lg lg:text-xl text-ink-700 leading-relaxed reveal-on-scroll">
+            Global şirketlerin ortak dilini, Türkiye'nin geleceğine taşıyoruz. <strong class="text-ink-900">Logical Thinking</strong> artık Türkiye'de — Gakken ile.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 reveal-on-scroll">
+            <button type="button"
+              class="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-lg px-8 py-4 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[48px]"
+              data-action="scroll" data-target="#program"
+              aria-label="Programı keşfedin — Program bölümüne git">
+              Programı Keşfedin
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            </button>
+            <button type="button"
+              class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint-50 text-brand-green-dark border-2 border-brand-green-dark font-sans font-semibold text-lg px-8 py-4 rounded-xl transition-colors duration-150 ease-out-soft min-h-[48px]"
+              data-action="open-modal" data-modal="lead-form-modal" data-source="hero"
+              aria-haspopup="dialog"
+              aria-label="Bilgi alın — form penceresini aç">
+              Bilgi Alın
+            </button>
           </div>
+          <!-- Trust mini-stat 3 satır -->
+          <ul class="flex flex-wrap gap-x-6 gap-y-3 pt-7 border-t border-ink-300 reveal-on-scroll" aria-label="Program özellikleri">
+            <li class="flex items-center gap-2 font-body text-sm text-ink-700">
+              <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Kontenjanlı
+            </li>
+            <li class="flex items-center gap-2 font-body text-sm text-ink-700">
+              <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Global Standartlarda
+            </li>
+            <li class="flex items-center gap-2 font-body text-sm text-ink-700">
+              <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Türkiye'de İlk ve Tek
+            </li>
+          </ul>
         </div>
+      </div>
+
+      <!-- Floating bottom-right glass card (Seki ref bottom-right "TÜRKİYE'DE İLK VE TEK" card) — desktop only -->
+      <div class="hidden lg:block absolute bottom-8 right-8 xl:bottom-12 xl:right-16 bg-ink-900/85 backdrop-blur-md text-white p-5 lg:p-6 rounded-2xl max-w-[280px] shadow-2xl z-[3] reveal-on-scroll">
+        <p class="font-sans text-[11px] font-bold uppercase tracking-widest text-mint-100 mb-2">Türkiye'de İlk ve Tek</p>
+        <p class="font-body text-sm leading-snug">Global şirketlerin ortak dili şimdi sizin için.</p>
       </div>
     </section>
 
