@@ -9,7 +9,7 @@
   function isMobile() { return window.innerWidth < 1024; }
 
   const heroEl = document.getElementById('hero');
-  const formEl = document.getElementById('form-section');
+  const formEl = document.getElementById('kayit');
   const footerEl = document.querySelector('footer');
 
   if (!heroEl || !formEl) return;

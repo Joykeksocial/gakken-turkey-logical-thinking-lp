@@ -32,6 +32,9 @@ preview-*.jpg
 slice-*.png
 *-slice-*.png
 *-fullscroll.png
+_smoke/
+final-*.png
+v3-*.png
 
 # Hero original (1920x1282 hi-res — sadece WebP/JPG variants commit edilir)
 assets/hero-original.jpg
