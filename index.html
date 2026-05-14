@@ -6,7 +6,7 @@
 
   <!-- SEO Meta (Aşama 1 preview için noindex) -->
   <title>Logical Thinking Eğitimi — Türkiye'de İlk ve Tek | Gakken Turkey</title>
-  <meta name="description" content="Global şirketlerin ortak düşünme dili artık Türkiye'de. Logical Thinking eğitimi — Türkiye'de ilk ve tek. Growth Barrier'ı kıran 4 büyüme adımı, MECE & Pyramid Structure ile somut sonuç.">
+  <meta name="description" content="Japon iş dünyasının 80 yıllık ortak düşünme dili artık Türkiye'de. Logical Thinking eğitimi — Türkiye'de ilk ve tek. Growth Barrier'ı kıran 4 büyüme adımı, MECE & Pyramid Structure ile somut sonuç.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="language" content="tr">
   <meta name="author" content="Gakken Turkey">
@@ -16,30 +16,32 @@
   <meta property="og:site_name" content="Gakken Turkey">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:title" content="Logical Thinking Eğitimi — Türkiye'de İlk ve Tek | Gakken Turkey">
-  <meta property="og:description" content="Global şirketlerin ortak düşünme dili artık Türkiye'de. Türkiye'de ilk ve tek Logical Thinking programı.">
+  <meta property="og:description" content="Japon iş dünyasının başarı sırrı şimdi Türkiye'de. Türkiye'de ilk ve tek Logical Thinking programı.">
   <meta property="og:url" content="https://joykeksocial.github.io/gakken-turkey-logical-thinking-lp/">
   <meta property="og:image" content="https://joykeksocial.github.io/gakken-turkey-logical-thinking-lp/assets/hero-1280.jpg">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="855">
-  <meta property="og:image:alt" content="Gakken Turkey Logical Thinking Eğitimi — Global standart düşünme becerisi">
+  <meta property="og:image:alt" content="Gakken Turkey Logical Thinking — Japon iş dünyasının başarı sırrı">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Logical Thinking Eğitimi — Türkiye'de İlk ve Tek | Gakken Turkey">
-  <meta name="twitter:description" content="Global şirketlerin ortak düşünme dili artık Türkiye'de. Türkiye'de ilk ve tek.">
+  <meta name="twitter:description" content="Japon iş dünyasının başarı sırrı şimdi Türkiye'de. Türkiye'de ilk ve tek.">
   <meta name="twitter:image" content="https://joykeksocial.github.io/gakken-turkey-logical-thinking-lp/assets/hero-1280.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/favicon.svg">
 
-  <!-- Google Fonts: Poppins (heading/CTA) + IBM Plex Sans (body/form) -->
+  <!-- Google Fonts: Inter Tight (display — Hamle 1) + IBM Plex Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/hero-1280.jpg" imagesrcset="assets/hero-640.jpg 640w, assets/hero-1280.jpg 1280w, assets/hero-1920.jpg 1920w" imagesizes="(min-width: 1024px) 62vw, 100vw">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;700&display=swap">
+  <link rel="preload" as="image" href="assets/hero-1280.webp"
+        imagesrcset="assets/hero-640.webp 640w, assets/hero-1280.webp 1280w, assets/hero-1920.webp 1920w"
+        imagesizes="100vw" type="image/webp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
 
-  <!-- Tailwind CDN + Inline config (design_system.md §10 preset) -->
+  <!-- Tailwind CDN + Inline config (Hamle 2 — v4 palette token: bg-canvas/bg-paper/accent-gold) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -55,8 +57,8 @@
               gray: '#717070'
             },
             ink: {
-              900: '#1a1a1a',
-              700: '#404040',
+              900: '#0B1A12',
+              700: '#3A4A40',
               500: '#717070',
               300: '#d4d4d4',
               100: '#f5f5f5'
@@ -65,21 +67,25 @@
               50: '#f5fbf7',
               100: '#e8f5ec'
             },
+            'bg-canvas': '#FAF7F2',
+            'bg-paper':  '#F2EDE4',
+            'accent-gold': '#C3A35F',
             error: '#c52a2a',
             danger: '#c52a2a'
           },
           fontFamily: {
-            sans: ['Poppins', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
-            body: ['"IBM Plex Sans"', 'system-ui', 'Segoe UI', 'sans-serif']
+            display: ['"Inter Tight"', 'Poppins', 'system-ui', 'sans-serif'],
+            sans:    ['"Inter Tight"', 'Poppins', 'system-ui', 'sans-serif'],
+            body:    ['"IBM Plex Sans"', 'system-ui', 'sans-serif']
           },
           fontSize: {
-            hero: ['clamp(2rem, 4vw + 1rem, 3.5rem)', { lineHeight: '1.1', fontWeight: '700' }]
+            hero: ['clamp(2.25rem, 5vw + 1rem, 5rem)', { lineHeight: '1.04', fontWeight: '800' }]
           },
-          borderRadius: { xl: '16px', '2xl': '24px' },
+          borderRadius: { xl: '16px', '2xl': '24px', '3xl': '32px' },
           boxShadow: {
-            card: '0 4px 16px -2px rgb(0 0 0 / 0.06), 0 2px 4px -2px rgb(0 0 0 / 0.04)',
+            card:  '0 4px 16px -2px rgb(0 0 0 / 0.06), 0 2px 4px -2px rgb(0 0 0 / 0.04)',
             modal: '0 16px 40px -8px rgb(0 0 0 / 0.12), 0 4px 8px -4px rgb(0 0 0 / 0.08)',
-            cta: '0 8px 24px -4px rgb(0 166 81 / 0.32)'
+            cta:   '0 8px 24px -4px rgb(0 166 81 / 0.32)'
           },
           maxWidth: { page: '1280px', 'page-w': '1440px' },
           transitionTimingFunction: { 'out-soft': 'cubic-bezier(0.16, 1, 0.3, 1)' }
@@ -88,49 +94,58 @@
     };
   </script>
 
-  <!-- Custom CSS (reveal pattern, skip link, modal state, form input) -->
+  <!-- Custom CSS (Ken Burns + marquee + cinematic shadow + reveal) -->
   <link rel="stylesheet" href="styles/custom.css">
+
+  <!-- GSAP + ScrollTrigger CDN (Hamle 10 — defer; CSS-only fallback hep çalışır) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
-<body class="font-sans text-ink-900 bg-white antialiased">
+<body class="font-body text-ink-900 bg-bg-canvas antialiased">
 
   <!-- Skip link (WCAG 2.4.1) -->
   <a class="skip-link" href="#main">İçeriğe geç</a>
 
-  <!-- Header — sticky + anchor menü (yeni map: Program · Neden Gakken · Yorumlar · Vaka · Bilgi Al) -->
+  <!-- Header — sticky (Hamle 8 CTA wording: Bilgi İste) -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-ink-300">
     <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 py-3 lg:py-4 flex items-center justify-between gap-4">
       <a href="#hero" aria-label="Gakken Turkey — sayfa başına dön" class="flex-shrink-0">
         <img src="assets/logo-gakken-turkey.svg" alt="Gakken Turkey" width="140" height="40" class="h-8 lg:h-10 w-auto">
       </a>
 
-      <!-- Desktop nav (lg+) -->
+      <!-- Desktop nav (lg+) — anchor map: Program · Neden Gakken · Yorumlar · Vaka · Bilgi İste -->
       <nav class="hidden lg:flex items-center gap-7 xl:gap-9" aria-label="Ana navigasyon">
-        <a href="#program" data-action="scroll" data-target="#program" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Program</a>
-        <a href="#manifesto" data-action="scroll" data-target="#manifesto" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Neden Gakken</a>
-        <a href="#yorumlar" data-action="scroll" data-target="#yorumlar" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Yorumlar</a>
-        <a href="#vaka" data-action="scroll" data-target="#vaka" class="font-sans text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Vaka</a>
-        <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="header" aria-haspopup="dialog" class="inline-flex items-center gap-1.5 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-[15px] px-5 py-2.5 rounded-xl shadow-cta transition-colors min-h-[40px]" aria-label="Bilgi al — form penceresini aç">
-          Bilgi Al
+        <a href="#program" data-action="scroll" data-target="#program" class="font-display text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Program</a>
+        <a href="#manifesto" data-action="scroll" data-target="#manifesto" class="font-display text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Neden Gakken</a>
+        <a href="#yorumlar" data-action="scroll" data-target="#yorumlar" class="font-display text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Yorumlar</a>
+        <a href="#case" data-action="scroll" data-target="#case" class="font-display text-[15px] font-medium text-ink-700 hover:text-brand-green-dark transition-colors">Vaka</a>
+        <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="header" aria-haspopup="dialog"
+                class="inline-flex items-center gap-1.5 bg-brand-green hover:bg-brand-green-dark text-white font-display font-semibold text-[15px] px-5 py-2.5 rounded-xl shadow-cta transition-colors min-h-[40px]"
+                aria-label="Bilgi iste — form penceresini aç">
+          Bilgi İste
         </button>
       </nav>
 
-      <!-- Mobile hamburger toggle (lg-altı — CTA drawer içinde) -->
+      <!-- Mobile hamburger toggle -->
       <button type="button" id="mobile-menu-toggle" class="flex lg:hidden w-11 h-11 items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 transition-colors" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
         <svg id="menu-icon-open" aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         <svg id="menu-icon-close" aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
     </div>
 
-    <!-- Mobile drawer (kapalı default) -->
+    <!-- Mobile drawer -->
     <nav id="mobile-menu" class="hidden lg:hidden bg-white border-t border-ink-300" aria-label="Mobil navigasyon">
       <ul class="max-w-page-w mx-auto px-4 sm:px-6 py-3 space-y-1">
-        <li><a href="#program" data-action="scroll" data-target="#program" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Program</a></li>
-        <li><a href="#manifesto" data-action="scroll" data-target="#manifesto" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Neden Gakken</a></li>
-        <li><a href="#yorumlar" data-action="scroll" data-target="#yorumlar" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Yorumlar</a></li>
-        <li><a href="#vaka" data-action="scroll" data-target="#vaka" data-close-menu class="block py-3 px-2 font-sans text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Vaka</a></li>
+        <li><a href="#program" data-action="scroll" data-target="#program" data-close-menu class="block py-3 px-2 font-display text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Program</a></li>
+        <li><a href="#manifesto" data-action="scroll" data-target="#manifesto" data-close-menu class="block py-3 px-2 font-display text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Neden Gakken</a></li>
+        <li><a href="#yorumlar" data-action="scroll" data-target="#yorumlar" data-close-menu class="block py-3 px-2 font-display text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Yorumlar</a></li>
+        <li><a href="#case" data-action="scroll" data-target="#case" data-close-menu class="block py-3 px-2 font-display text-base font-medium text-ink-900 hover:bg-mint-50 hover:text-brand-green-dark rounded-lg transition-colors">Vaka</a></li>
         <li class="pt-2 pb-1">
-          <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="mobile-drawer" data-close-menu aria-haspopup="dialog" class="w-full flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-base px-5 py-3 rounded-xl shadow-cta transition-colors min-h-[48px]">Bilgi Al →</button>
+          <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="mobile-drawer" data-close-menu aria-haspopup="dialog"
+                  class="w-full flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-display font-semibold text-base px-5 py-3 rounded-xl shadow-cta transition-colors min-h-[48px]">
+            Bilgi İste →
+          </button>
         </li>
       </ul>
     </nav>
@@ -138,295 +153,370 @@
 
   <main id="main">
 
-    <!-- ===== BLOK 1 — HERO (Seki 2026-05-13 ref: full-bleed image + sol white fade + bottom-right card) ===== -->
-    <section id="hero" aria-labelledby="hero-h1" class="relative bg-white overflow-hidden lg:min-h-[640px]">
+    <!-- ============================================================ -->
+    <!-- BLOK 1 — HERO (Hamle 3 v4 refactor)                            -->
+    <!-- HERO-01 cinematic background + Ken Burns + eyelet + 3 katman   -->
+    <!-- subheading + 2 CTA (Bilgi İste / Programı İnceleyin)           -->
+    <!-- ============================================================ -->
+    <section id="hero" aria-labelledby="hero-h1" class="relative overflow-hidden bg-ink-900 lg:min-h-[720px]">
 
-      <!-- DESKTOP: Image absolute right (60% genişlik, viewport sağ kenarına dayalı) -->
-      <div aria-hidden="true" class="hidden lg:block absolute inset-y-0 right-0 w-[62%] xl:w-[58%] z-0">
-        <picture>
-          <source media="(min-width: 1536px)" srcset="assets/hero-1920.jpg">
-          <img src="assets/hero-1280.jpg"
-               alt=""
-               class="w-full h-full object-cover">
-        </picture>
-        <!-- Soft beyaz fade sol kenardan içeriye (text-image yumuşak geçiş — Seki "yumuşak maskeleme") -->
-        <div aria-hidden="true" class="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-white via-white/85 to-transparent"></div>
-      </div>
+      <!-- Background: HERO-01 + Ken Burns -->
+      <picture>
+        <source media="(min-width:1280px)" srcset="assets/hero-1920.webp" type="image/webp">
+        <source media="(min-width:640px)"  srcset="assets/hero-1280.webp" type="image/webp">
+        <source srcset="assets/hero-640.webp" type="image/webp">
+        <img src="assets/hero-1280.jpg"
+             alt=""
+             class="hero-bg hero-kenburns absolute inset-0 w-full h-full object-cover z-0"
+             decoding="async" fetchpriority="high">
+      </picture>
 
-      <!-- MOBILE: Image inline üstte (aspect-bounded) -->
-      <div class="lg:hidden relative aspect-[16/11] sm:aspect-[16/9] overflow-hidden">
-        <picture>
-          <source media="(min-width: 640px)" srcset="assets/hero-1280.jpg">
-          <img src="assets/hero-640.jpg"
-               alt="Çeşitli ekip toplantı odasında laptop'larla işbirliği yapıyor — Logical Thinking çalışması"
-               width="640" height="427"
-               loading="eager" fetchpriority="high"
-               class="w-full h-full object-cover">
-        </picture>
-        <!-- Mobile bottom white fade (image-content yumuşak geçiş) -->
-        <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
-      </div>
+      <!-- Brand overlay (text contrast — multi-stop) -->
+      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-ink-900/25 via-ink-900/45 to-ink-900/70 z-[1]"></div>
+      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-brand-green-dark/35 via-transparent to-transparent z-[1]"></div>
 
-      <!-- Content (left ~48% on lg, full on mobile) -->
-      <div class="relative max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 py-10 lg:py-24 z-[2]">
-        <div class="lg:max-w-[48%] xl:max-w-[46%] space-y-7">
-          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-mint-100 text-brand-green-dark font-sans text-xs font-bold uppercase tracking-widest reveal-on-scroll">
-            <span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-green-dark"></span>
+      <!-- Content -->
+      <div class="relative max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-28 z-[2]">
+        <div class="max-w-5xl space-y-6 lg:space-y-7">
+
+          <!-- Eyelet -->
+          <p class="eyelet text-mint-100 reveal-on-scroll" data-reveal>
+            <span aria-hidden="true" class="inline-block w-6 h-px bg-mint-100 align-middle mr-2"></span>
             Türkiye'de İlk ve Tek
-          </span>
-          <h1 id="hero-h1" class="font-sans font-bold text-[clamp(2rem,4vw+1rem,3.5rem)] leading-[1.05] text-ink-900 text-balance reveal-on-scroll">
-            <span class="block text-brand-green-dark">GLOBAL STANDART.</span>
-            <span class="block">TÜRKİYE'NİN GELECEĞİ.</span>
-          </h1>
-          <p class="font-sans text-lg lg:text-xl text-ink-700 leading-relaxed reveal-on-scroll">
-            Global şirketlerin ortak dilini, Türkiye'nin geleceğine taşıyoruz. <strong class="text-ink-900">Logical Thinking</strong> artık Türkiye'de — Gakken ile.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 reveal-on-scroll">
-            <button type="button"
-              class="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-lg px-8 py-4 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[48px]"
-              data-action="scroll" data-target="#program"
-              aria-label="Programı keşfedin — Program bölümüne git">
-              Programı Keşfedin
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-            </button>
-            <button type="button"
-              class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint-50 text-brand-green-dark border-2 border-brand-green-dark font-sans font-semibold text-lg px-8 py-4 rounded-xl transition-colors duration-150 ease-out-soft min-h-[48px]"
-              data-action="open-modal" data-modal="lead-form-modal" data-source="hero"
-              aria-haspopup="dialog"
-              aria-label="Bilgi alın — form penceresini aç">
-              Bilgi Alın
-            </button>
-          </div>
-          <!-- Trust mini-stat 3 satır -->
-          <ul class="flex flex-wrap gap-x-6 gap-y-3 pt-7 border-t border-ink-300 reveal-on-scroll" aria-label="Program özellikleri">
-            <li class="flex items-center gap-2 font-body text-sm text-ink-700">
-              <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Kontenjanlı
-            </li>
-            <li class="flex items-center gap-2 font-body text-sm text-ink-700">
-              <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Global Standartlarda
-            </li>
-            <li class="flex items-center gap-2 font-body text-sm text-ink-700">
-              <svg aria-hidden="true" class="text-brand-green-dark flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Türkiye'de İlk ve Tek
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- Floating bottom-right glass card (Seki ref bottom-right "TÜRKİYE'DE İLK VE TEK" card) — desktop only -->
-      <div class="hidden lg:block absolute bottom-8 right-8 xl:bottom-12 xl:right-16 bg-ink-900/85 backdrop-blur-md text-white p-5 lg:p-6 rounded-2xl max-w-[280px] shadow-2xl z-[3] reveal-on-scroll">
-        <p class="font-sans text-[11px] font-bold uppercase tracking-widest text-mint-100 mb-2">Türkiye'de İlk ve Tek</p>
-        <p class="font-body text-sm leading-snug">Global şirketlerin ortak dili şimdi sizin için.</p>
+          <!-- H1 -->
+          <h1 id="hero-h1" class="font-display font-bold text-hero leading-[1.04] tracking-[-0.02em] text-white text-balance reveal-on-scroll" data-reveal>
+            Japon İş Dünyasının Başarı Sırrı<br>
+            <span class="text-mint-100">Şimdi Türkiye'de</span>
+          </h1>
+
+          <!-- Subheading -->
+          <p class="font-body text-lg lg:text-2xl text-white/90 leading-relaxed max-w-3xl reveal-on-scroll" data-reveal>
+            Japon şirketlerinin 80 yıllık ortak düşünme dili — global organizasyonlarda kullanılan <strong class="text-white">Mantıksal Düşünme</strong> metodu.
+          </p>
+
+          <!-- Strip 1: Fonksiyon eyelet -->
+          <p class="eyelet text-mint-100/90 pt-2 reveal-on-scroll" data-reveal>
+            KARAR ALMA · PROBLEM ÇÖZME · EKİP İLETİŞİMİ
+          </p>
+
+          <!-- Strip 2: Rakam -->
+          <p class="font-display text-base lg:text-lg text-white/75 tracking-wide reveal-on-scroll" data-reveal>
+            80 yıl · 17 ülke · 110+ şirket · 29.184 çalışan
+          </p>
+
+          <!-- CTA pair -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-4 reveal-on-scroll" data-reveal>
+            <button type="button"
+                    data-action="open-modal" data-modal="lead-form-modal" data-source="hero"
+                    aria-haspopup="dialog"
+                    aria-label="Bilgi iste — form penceresini aç"
+                    class="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-display font-semibold text-lg px-8 py-4 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[52px]">
+              Bilgi İste
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#program"
+               data-action="scroll" data-target="#program"
+               class="inline-flex items-center justify-center gap-2 text-white/90 hover:text-white font-display font-medium text-lg px-2 py-4 min-h-[52px] underline-offset-4 hover:underline">
+              Programı İnceleyin
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- ===== BLOK 2 — 3-PHASE GROWTH BARRIER (Gakken Görsel 1 birebir SVG/CSS reproduce) ===== -->
-    <section id="growth-barrier" aria-labelledby="growth-barrier-h2" class="bg-mint-50 py-14 lg:py-24">
+    <!-- ============================================================ -->
+    <!-- BLOK 2 — LOGO MARQUEE (Hamle 4 YENİ — sonsuz loop + edge mask) -->
+    <!-- ============================================================ -->
+    <section id="logo-marquee" aria-label="Japon menşeli global gruplar" class="bg-bg-canvas py-10 lg:py-14 border-b border-ink-300/40">
       <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
-        <div class="max-w-4xl mx-auto text-center mb-14 lg:mb-16">
-          <p class="font-sans text-xs lg:text-sm font-bold uppercase tracking-widest text-brand-green-dark reveal-on-scroll">
-            Gakken Turkey Business Concept
-          </p>
-          <h2 id="growth-barrier-h2" class="mt-4 font-sans font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll">
-            Büyüyen Şirketlerin Ortak Duvarı: <span class="text-brand-green-dark">Growth Barrier</span>
-          </h2>
-          <p class="mt-5 font-sans text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll">
-            Hızlı büyüyen şirketlerin önündeki engel — ve onu kıran ortak dil.
-          </p>
-          <p class="mt-6 max-w-3xl mx-auto font-body italic text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll">
-            Gakken Turkey, hızlı büyüyen şirketlerin Growth Barrier'ını kıran gelişim partneridir. İnsan gelişimine yatırım, kurumsal değere doğrudan yatırımdır.
-          </p>
+        <p class="eyelet text-center text-ink-500 mb-6 lg:mb-8">
+          Japon menşeli global gruplar
+        </p>
+        <div class="marquee-mask">
+          <div class="marquee-track">
+            <!-- Set 1 (10 logo) -->
+            <img src="assets/logos/wall/sumitomo.svg" alt="Sumitomo" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/yanmar.svg" alt="Yanmar" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/mitsubishi.svg" alt="Mitsubishi" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/marubeni.svg" alt="Marubeni" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/nisshun-seifun.svg" alt="Nisshun Seifun" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/hms.svg" alt="HMS" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/smc.svg" alt="SMC" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/dunlop.svg" alt="Dunlop" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/artience.svg" alt="Artience" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/anadolu-isuzu.svg" alt="Anadolu ISUZU" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <!-- Set 2 (duplicate — seamless loop) -->
+            <img src="assets/logos/wall/sumitomo.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/yanmar.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/mitsubishi.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/marubeni.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/nisshun-seifun.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/hms.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/smc.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/dunlop.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/artience.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+            <img src="assets/logos/wall/anadolu-isuzu.svg" alt="" aria-hidden="true" class="h-10 lg:h-12 w-auto grayscale opacity-70">
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- 3 Faz grid + akış okları -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-4 items-stretch reveal-on-scroll">
+    <!-- ============================================================ -->
+    <!-- BLOK 3 — PAIN (Hamle 5 — yan yana scene + rounded-[32px])      -->
+    <!-- Sol: 4 problem ikon · Sağ: Growth Barrier metafor SVG          -->
+    <!-- ============================================================ -->
+    <section id="pain" aria-labelledby="pain-h2" class="bg-bg-canvas py-14 lg:py-24">
+      <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
 
-          <!-- Faz 1 — Hızlı Büyüme -->
-          <article class="lg:col-span-3 bg-white rounded-2xl border-2 border-brand-green/30 p-6 lg:p-7 flex flex-col shadow-card">
-            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-mint-100 text-brand-green-dark mb-4">
-              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg>
-            </span>
-            <p class="font-sans text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-1">Faz 1</p>
-            <h3 class="font-sans font-bold text-xl text-ink-900 mb-3">Hızlı Büyüme</h3>
-            <p class="font-body text-sm text-ink-700 leading-relaxed flex-1">
-              Genç yetenek ve güçlü uygulama ile iş büyüyor.
+        <div class="relative bg-bg-paper rounded-3xl overflow-hidden p-6 sm:p-10 lg:p-14 reveal-on-scroll" data-reveal>
+
+          <div class="max-w-3xl mb-10 lg:mb-14">
+            <p class="eyelet text-brand-green-dark mb-3">Growth Barrier</p>
+            <h2 id="pain-h2" class="font-display font-bold text-3xl lg:text-5xl text-ink-900 leading-tight tracking-[-0.01em] text-balance">
+              Şirketinizin Görünmeyen Vergisi: <span class="text-brand-green-dark">Düşünme Tutarsızlığı</span>
+            </h2>
+            <p class="mt-4 font-body text-base lg:text-lg text-ink-700 leading-relaxed">
+              Hızlı büyüyen şirketlerin önündeki engel: aynı çerçevede düşünmeyen ekipler. Toplantılar uzar, kararlar yavaşlar, departmanlar kopuk kalır.
             </p>
-          </article>
-
-          <!-- Akış oku → -->
-          <div aria-hidden="true" class="hidden lg:flex lg:col-span-1 items-center justify-center text-brand-gray">
-            <svg width="48" height="24" viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h40"/><path d="m37 5 8 7-8 7"/></svg>
           </div>
 
-          <!-- Faz 2 — Growth Barrier (dramatic — duvar kırılışı SVG/CSS) -->
-          <article class="lg:col-span-4 relative bg-white rounded-2xl border-2 border-danger/40 p-6 lg:p-7 flex flex-col shadow-card">
-            <span class="absolute -top-3 left-6 inline-flex items-center px-3 py-1 rounded-full bg-danger text-white font-sans text-xs font-bold uppercase tracking-wide">Break Through</span>
-            <p class="font-sans text-xs font-bold uppercase tracking-widest text-danger mb-1 mt-2">Faz 2 · The Wall</p>
-            <h3 class="font-sans font-bold text-xl text-ink-900 mb-3">Growth Barrier'ı Kır</h3>
+          <!-- Yan yana scene -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
-            <!-- Duvar kırılışı SVG metaforu -->
-            <div class="relative w-full aspect-[16/9] bg-ink-100 rounded-lg overflow-hidden mb-4">
-              <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" role="img" aria-label="Duvar kırılışı metaforu — kırmızı ok yukarı yönelir">
-                <!-- Tuğla duvar pattern -->
-                <defs>
-                  <pattern id="brick" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
-                    <rect width="40" height="20" fill="#d4d4d4"/>
-                    <path d="M0 0v20M40 0v20M0 10h40M20 0v10M0 10h20" stroke="#a8a8a8" stroke-width="1" fill="none"/>
-                  </pattern>
-                </defs>
-                <rect x="0" y="0" width="320" height="180" fill="url(#brick)"/>
-                <!-- Çatlak/break — orta yukarıya -->
-                <path d="M155 180 L155 105 L140 95 L165 70 L150 60 L175 35 L160 25 L190 5"
-                      stroke="#1a1a1a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-                <!-- Kırılan tuğla parçalar -->
-                <polygon points="120,70 140,65 145,85 125,90" fill="#ffffff" stroke="#1a1a1a" stroke-width="1" opacity="0.9"/>
-                <polygon points="175,55 195,50 200,68 180,72" fill="#ffffff" stroke="#1a1a1a" stroke-width="1" opacity="0.9"/>
-                <polygon points="195,90 215,85 218,100 200,105" fill="#ffffff" stroke="#1a1a1a" stroke-width="1" opacity="0.9"/>
-                <!-- Kırmızı ok yukarı -->
-                <g>
-                  <rect x="148" y="40" width="14" height="120" fill="#c52a2a" rx="2"/>
-                  <polygon points="130,55 155,15 180,55" fill="#c52a2a"/>
-                </g>
-              </svg>
-            </div>
-
-            <!-- 4 kanonik problem -->
-            <ul class="space-y-2.5">
-              <li class="flex items-start gap-2.5 font-body text-sm text-ink-900">
-                <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-                <span><strong class="text-ink-900">Karar Almada Gecikme</strong><br><em class="text-xs text-ink-500">Delays in Decision-Making</em></span>
+            <!-- SOL: 4 problem ikon kartı -->
+            <ul class="space-y-4 lg:space-y-5">
+              <li class="flex items-start gap-4 bg-white rounded-2xl p-5 lg:p-6 shadow-card border border-ink-300/60">
+                <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-xl bg-mint-100 text-brand-green-dark flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                <div>
+                  <h3 class="font-display font-semibold text-lg text-ink-900">Toplantılar Uzuyor</h3>
+                  <p class="mt-1 font-body text-sm text-ink-700 leading-relaxed">60 dakika konuşulur, karar çıkmaz. Ekip farklı boyutlardan tartışır.</p>
+                </div>
               </li>
-              <li class="flex items-start gap-2.5 font-body text-sm text-ink-900">
-                <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
-                <span><strong class="text-ink-900">Yürütme Hızında Düşüş</strong><br><em class="text-xs text-ink-500">Decline in Execution Speed</em></span>
+              <li class="flex items-start gap-4 bg-white rounded-2xl p-5 lg:p-6 shadow-card border border-ink-300/60">
+                <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-xl bg-mint-100 text-brand-green-dark flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+                </span>
+                <div>
+                  <h3 class="font-display font-semibold text-lg text-ink-900">Kararlar Yavaşlıyor</h3>
+                  <p class="mt-1 font-body text-sm text-ink-700 leading-relaxed">Hangi yöne gideceğimiz net değil. Aksiyon ertesi haftaya kalır.</p>
+                </div>
               </li>
-              <li class="flex items-start gap-2.5 font-body text-sm text-ink-900">
-                <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 11h6M19 8v6"/></svg></span>
-                <span><strong class="text-ink-900">Verimlilik Düşüşü</strong><br><em class="text-xs text-ink-500">Lower Productivity</em></span>
+              <li class="flex items-start gap-4 bg-white rounded-2xl p-5 lg:p-6 shadow-card border border-ink-300/60">
+                <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-xl bg-mint-100 text-brand-green-dark flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M17 11h.01M21 11h.01M17 15h.01"/></svg>
+                </span>
+                <div>
+                  <h3 class="font-display font-semibold text-lg text-ink-900">Ekipler Aynı Problemi Farklı Yorumluyor</h3>
+                  <p class="mt-1 font-body text-sm text-ink-700 leading-relaxed">Pazarlama ve Satış aynı veriden farklı sonuç çıkarır. Ortak resim yok.</p>
+                </div>
               </li>
-              <li class="flex items-start gap-2.5 font-body text-sm text-ink-900">
-                <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v4h-4" transform="rotate(180 19 9)"/></svg></span>
-                <span><strong class="text-ink-900">Kurumsal Değerde Durağanlık</strong><br><em class="text-xs text-ink-500">Stagnation in Corporate Value</em></span>
+              <li class="flex items-start gap-4 bg-white rounded-2xl p-5 lg:p-6 shadow-card border border-ink-300/60">
+                <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-xl bg-mint-100 text-brand-green-dark flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                </span>
+                <div>
+                  <h3 class="font-display font-semibold text-lg text-ink-900">Departmanlar Arası Kopukluk</h3>
+                  <p class="mt-1 font-body text-sm text-ink-700 leading-relaxed">Her birim kendi diliyle konuşur. Hizalanma manuel ve yorucu.</p>
+                </div>
               </li>
             </ul>
-          </article>
 
-          <!-- Akış oku → -->
-          <div aria-hidden="true" class="hidden lg:flex lg:col-span-1 items-center justify-center text-brand-gray">
-            <svg width="48" height="24" viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h40"/><path d="m37 5 8 7-8 7"/></svg>
+            <!-- SAĞ: Growth Barrier metafor SVG (duvar kırılışı) -->
+            <figure class="lg:sticky lg:top-24">
+              <div class="relative w-full aspect-[5/6] sm:aspect-[4/5] lg:aspect-[4/5] bg-white rounded-2xl overflow-hidden border border-ink-300/60 shadow-card">
+                <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" role="img" aria-labelledby="growth-barrier-title">
+                  <title id="growth-barrier-title">Growth Barrier — tuğla duvar kırılışı, kırmızı ok yukarı yönelir</title>
+                  <defs>
+                    <pattern id="brickPattern" x="0" y="0" width="80" height="40" patternUnits="userSpaceOnUse">
+                      <rect width="80" height="40" fill="#E8E2D6"/>
+                      <path d="M0 0v40M80 0v40M0 20h80M40 0v20M0 20h40" stroke="#C9C0AC" stroke-width="1.5" fill="none"/>
+                    </pattern>
+                    <linearGradient id="shadeGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#0B1A12" stop-opacity="0.06"/>
+                      <stop offset="100%" stop-color="#0B1A12" stop-opacity="0.15"/>
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Background canvas -->
+                  <rect x="0" y="0" width="400" height="500" fill="#FAF7F2"/>
+
+                  <!-- Tuğla duvar -->
+                  <rect x="0" y="0" width="400" height="500" fill="url(#brickPattern)"/>
+                  <rect x="0" y="0" width="400" height="500" fill="url(#shadeGrad)"/>
+
+                  <!-- Çatlak (organic break path) -->
+                  <path d="M200 500 L200 380 L180 360 L210 320 L185 290 L215 250 L190 215 L220 175 L195 140 L225 100 L200 70 L235 30 L210 5"
+                        stroke="#0B1A12" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+
+                  <!-- Kırılan tuğla parçaları -->
+                  <polygon points="140,180 175,165 188,210 152,225" fill="#FFFFFF" stroke="#0B1A12" stroke-width="1.5" opacity="0.92"/>
+                  <polygon points="230,140 265,125 278,170 240,185" fill="#FFFFFF" stroke="#0B1A12" stroke-width="1.5" opacity="0.92"/>
+                  <polygon points="160,280 195,265 208,310 170,325" fill="#FFFFFF" stroke="#0B1A12" stroke-width="1.5" opacity="0.92"/>
+                  <polygon points="250,330 285,315 298,360 260,375" fill="#FFFFFF" stroke="#0B1A12" stroke-width="1.5" opacity="0.92"/>
+
+                  <!-- Kırmızı yukarı yön ok -->
+                  <g>
+                    <rect x="188" y="60" width="24" height="380" fill="#C52A2A" rx="3"/>
+                    <polygon points="158,90 200,18 242,90" fill="#C52A2A"/>
+                  </g>
+
+                  <!-- Caption -->
+                  <text x="200" y="478" text-anchor="middle"
+                        font-family="'Inter Tight', Poppins, sans-serif"
+                        font-size="14" font-weight="700"
+                        fill="#0B1A12" letter-spacing="2">GROWTH BARRIER</text>
+                </svg>
+              </div>
+              <figcaption class="mt-4 font-body italic text-sm text-ink-700 text-center max-w-md mx-auto">
+                4 problemin ortak adı: <strong class="not-italic text-ink-900">Growth Barrier</strong> — büyümenin önündeki görünmez duvar.
+              </figcaption>
+            </figure>
+
           </div>
 
-          <!-- Faz 3 — Global Standartlara Entegrasyon -->
-          <article class="lg:col-span-3 bg-white rounded-2xl border-2 border-brand-green-dark/30 p-6 lg:p-7 flex flex-col shadow-card">
-            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-mint-100 text-brand-green-dark mb-4">
-              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </span>
-            <p class="font-sans text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-1">Faz 3</p>
-            <h3 class="font-sans font-bold text-xl text-ink-900 mb-3">Global Standartlara Entegrasyon</h3>
-            <p class="font-body text-sm text-ink-700 leading-relaxed flex-1">
-              Dayanıklı organizasyonlar sürdürülebilir büyümeye ulaşır.
-            </p>
-          </article>
+          <!-- Closing transition -->
+          <p class="mt-12 lg:mt-16 max-w-3xl mx-auto text-center font-display italic text-lg lg:text-xl text-ink-900 leading-relaxed reveal-on-scroll" data-reveal>
+            Bu engelin tek adı vardır: <strong class="not-italic text-brand-green-dark">ortak bir düşünme dilinin eksikliği.</strong>
+          </p>
         </div>
+
       </div>
     </section>
 
-    <!-- ===== BLOK 3 — "Ortak Dil" Çözüm Çerçevesi ===== -->
+    <!-- ============================================================ -->
+    <!-- BLOK 4 — VİDEO (Hamle 6 YENİ — Loom-tarzı rounded + cinematic) -->
+    <!-- ============================================================ -->
+    <section id="video-section" aria-labelledby="video-h2" class="bg-bg-canvas py-14 lg:py-24">
+      <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
+
+        <div class="text-center max-w-3xl mx-auto mb-10 lg:mb-12">
+          <p class="eyelet text-brand-green-dark mb-3 reveal-on-scroll" data-reveal>
+            Mantıksal Düşünme Nedir?
+          </p>
+          <h2 id="video-h2" class="font-display font-bold text-3xl lg:text-5xl text-ink-900 tracking-[-0.01em] reveal-on-scroll" data-reveal>
+            Bir bakışta <span class="text-brand-green-dark">görün.</span>
+          </h2>
+        </div>
+
+        <div class="video-wrap shadow-cinematic rounded-3xl overflow-hidden mx-auto max-w-5xl bg-ink-900 reveal-on-scroll" data-reveal>
+          <video
+            poster="assets/gakken-poster.webp"
+            preload="metadata"
+            muted autoplay loop playsinline
+            class="w-full h-auto aspect-video block">
+            <source src="assets/gakken-intro.mp4"  type="video/mp4">
+            Tarayıcınız video oynatmayı desteklemiyor. <a href="assets/gakken-intro.mp4" class="underline text-mint-100">Videoyu indirin.</a>
+          </video>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOK 5 — "Ortak Dil" çözüm köprüsü                             -->
+    <!-- ============================================================ -->
     <section id="ortak-dil" aria-labelledby="ortak-dil-h2" class="bg-white py-14 lg:py-24">
       <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-4xl mx-auto text-center mb-12">
-          <h2 id="ortak-dil-h2" class="font-sans font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll">
+          <h2 id="ortak-dil-h2" class="font-display font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll" data-reveal>
             Çözüm: <span class="text-brand-green-dark">Ortak Bir Dil, Ortak Bir Yön, Ortak Sonuç</span>
           </h2>
-          <p class="mt-5 font-sans text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll">
+          <p class="mt-5 font-body text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll" data-reveal>
             Growth Barrier'ı kıran tek şey, organizasyonun her katmanında ortak bir düşünme dilidir.
           </p>
         </div>
 
-        <ul class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-5xl mx-auto reveal-on-scroll">
-          <li class="bg-mint-50 rounded-xl p-6 lg:p-7 border border-mint-100 text-center">
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-5xl mx-auto reveal-on-scroll" data-reveal>
+          <li class="bg-bg-paper rounded-2xl p-6 lg:p-7 text-center">
             <span aria-hidden="true" class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white text-brand-green-dark mb-4 shadow-card">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2zm5 0A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"/></svg>
             </span>
-            <h3 class="font-sans font-bold text-xl text-ink-900 mb-2">Ortak Bir Dil</h3>
+            <h3 class="font-display font-bold text-xl text-ink-900 mb-2">Ortak Bir Dil</h3>
             <p class="font-body text-sm text-ink-700 leading-relaxed">Her ekibin aynı çerçeveyle düşünmesi.</p>
           </li>
-          <li class="bg-mint-50 rounded-xl p-6 lg:p-7 border border-mint-100 text-center">
+          <li class="bg-bg-paper rounded-2xl p-6 lg:p-7 text-center">
             <span aria-hidden="true" class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white text-brand-green-dark mb-4 shadow-card">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
             </span>
-            <h3 class="font-sans font-bold text-xl text-ink-900 mb-2">Ortak Bir Yön</h3>
+            <h3 class="font-display font-bold text-xl text-ink-900 mb-2">Ortak Bir Yön</h3>
             <p class="font-body text-sm text-ink-700 leading-relaxed">Kararların aynı standartla alınması.</p>
           </li>
-          <li class="bg-mint-50 rounded-xl p-6 lg:p-7 border border-mint-100 text-center">
+          <li class="bg-bg-paper rounded-2xl p-6 lg:p-7 text-center">
             <span aria-hidden="true" class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white text-brand-green-dark mb-4 shadow-card">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </span>
-            <h3 class="font-sans font-bold text-xl text-ink-900 mb-2">Ortak Sonuç</h3>
+            <h3 class="font-display font-bold text-xl text-ink-900 mb-2">Ortak Sonuç</h3>
             <p class="font-body text-sm text-ink-700 leading-relaxed">Hızlı uygulama + sürdürülebilir büyüme.</p>
           </li>
         </ul>
 
-        <p class="mt-12 max-w-3xl mx-auto text-center font-sans font-semibold text-xl lg:text-2xl text-ink-900 text-balance reveal-on-scroll">
+        <p class="mt-12 max-w-3xl mx-auto text-center font-display font-semibold text-xl lg:text-2xl text-ink-900 text-balance reveal-on-scroll" data-reveal>
           Bu ortak dil bir kavramın markasıdır: <span class="text-brand-green-dark font-bold">Logical Thinking.</span>
         </p>
       </div>
     </section>
 
-    <!-- ===== BLOK 4 — Geleceğin En Değerli Becerisi (Data-Driven Authority) ===== -->
-    <section id="gelecek-becerisi" aria-labelledby="gelecek-h2" class="bg-ink-900 text-white py-14 lg:py-24">
+    <!-- ============================================================ -->
+    <!-- BLOK 6 — DATA: WEF Top 5 + AI Era + Kaynak yatırımı            -->
+    <!-- (Hamle 7 / Section title rafine: WEF Top 5)                    -->
+    <!-- ============================================================ -->
+    <section id="data" aria-labelledby="data-h2" class="bg-ink-900 text-white py-14 lg:py-24">
       <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-4xl mx-auto text-center mb-14">
-          <p class="font-sans text-xs lg:text-sm font-bold uppercase tracking-widest text-mint-100 reveal-on-scroll">
+          <p class="eyelet text-mint-100 reveal-on-scroll" data-reveal>
             Data-Driven Authority
           </p>
-          <h2 id="gelecek-h2" class="mt-4 font-sans font-bold text-3xl lg:text-5xl text-white text-balance reveal-on-scroll">
-            Geleceğin En Değerli İş Becerisi: <span class="text-mint-100">Logical Thinking</span>
+          <h2 id="data-h2" class="mt-4 font-display font-bold text-3xl lg:text-5xl text-white text-balance reveal-on-scroll" data-reveal>
+            WEF Top 5: <span class="text-mint-100">Analitik Düşünme #1</span>
           </h2>
-          <p class="mt-5 font-sans text-base lg:text-lg text-white/80 leading-relaxed reveal-on-scroll">
+          <p class="mt-5 font-body text-base lg:text-lg text-white/80 leading-relaxed reveal-on-scroll" data-reveal>
             Global iş dünyasının kararlarını AI çağına taşıyan temel yetkinlik.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 reveal-on-scroll">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 reveal-on-scroll" data-reveal>
 
-          <!-- Kolon A — WEF Top Business Skills 2025 (PDF s.6 official sıralama) -->
+          <!-- Kolon A — WEF 2025 -->
           <div class="bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-7">
-            <p class="font-sans text-xs font-bold uppercase tracking-widest text-mint-100 mb-4">Kolon A · WEF 2025</p>
-            <h3 class="font-sans font-bold text-xl text-white mb-5">Önemi En Çok Artan İlk 5 Beceri</h3>
+            <p class="eyelet text-mint-100 mb-4">Kolon A · WEF 2025</p>
+            <h3 class="font-display font-bold text-xl text-white mb-5">Önemi En Çok Artan İlk 5 Beceri</h3>
             <ol class="space-y-3">
               <li class="flex items-start gap-4 bg-brand-green-dark/30 border-l-4 border-brand-green rounded-r-lg pl-3 py-2.5">
-                <span class="font-sans font-bold text-2xl text-mint-100 w-8 flex-shrink-0">01</span>
+                <span class="font-display font-bold text-2xl text-mint-100 w-8 flex-shrink-0">01</span>
                 <span class="flex-1">
-                  <span class="block font-sans font-semibold text-base text-white">Analytical Thinking</span>
+                  <span class="block font-display font-semibold text-base text-white">Analytical Thinking</span>
                   <span class="block font-body italic text-xs text-mint-100/80 mt-0.5">Analitik Düşünme</span>
                 </span>
               </li>
               <li class="flex items-start gap-4 pl-3 py-2 text-white/80">
-                <span class="font-sans font-bold text-xl text-white/40 w-8 flex-shrink-0">02</span>
+                <span class="font-display font-bold text-xl text-white/40 w-8 flex-shrink-0">02</span>
                 <span class="flex-1">
                   <span class="block font-body text-base">Technology Literacy</span>
                   <span class="block font-body italic text-xs text-white/50 mt-0.5">Teknoloji Okuryazarlığı</span>
                 </span>
               </li>
               <li class="flex items-start gap-4 pl-3 py-2 text-white/80">
-                <span class="font-sans font-bold text-xl text-white/40 w-8 flex-shrink-0">03</span>
+                <span class="font-display font-bold text-xl text-white/40 w-8 flex-shrink-0">03</span>
                 <span class="flex-1">
                   <span class="block font-body text-base">Resilience, Flexibility &amp; Agility</span>
                   <span class="block font-body italic text-xs text-white/50 mt-0.5">Direnç, Esneklik ve Çeviklik</span>
                 </span>
               </li>
               <li class="flex items-start gap-4 pl-3 py-2 text-white/80">
-                <span class="font-sans font-bold text-xl text-white/40 w-8 flex-shrink-0">04</span>
+                <span class="font-display font-bold text-xl text-white/40 w-8 flex-shrink-0">04</span>
                 <span class="flex-1">
                   <span class="block font-body text-base">Motivation &amp; Self-Awareness</span>
                   <span class="block font-body italic text-xs text-white/50 mt-0.5">Motivasyon ve Öz Farkındalık</span>
                 </span>
               </li>
               <li class="flex items-start gap-4 pl-3 py-2 text-white/80">
-                <span class="font-sans font-bold text-xl text-white/40 w-8 flex-shrink-0">05</span>
+                <span class="font-display font-bold text-xl text-white/40 w-8 flex-shrink-0">05</span>
                 <span class="flex-1">
                   <span class="block font-body text-base">Curiosity &amp; Lifelong Learning</span>
                   <span class="block font-body italic text-xs text-white/50 mt-0.5">Merak ve Yaşam Boyu Öğrenme</span>
@@ -436,15 +526,14 @@
             <p class="mt-5 font-body italic text-xs text-white/60">Kaynak: World Economic Forum — Future of Jobs Report 2025</p>
           </div>
 
-          <!-- Kolon B — AI Era Before/After Matrisi (PDF s.6 sağ-üst birebir) -->
+          <!-- Kolon B — AI Era Before/After Matrisi -->
           <div class="bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-7">
-            <p class="font-sans text-xs font-bold uppercase tracking-widest text-mint-100 mb-4">Kolon B · AI Çağı Geçişi</p>
-            <h3 class="font-sans font-bold text-xl text-white mb-5">İhtiyaç Duyulan Düşünme Gücü</h3>
+            <p class="eyelet text-mint-100 mb-4">Kolon B · AI Çağı Geçişi</p>
+            <h3 class="font-display font-bold text-xl text-white mb-5">İhtiyaç Duyulan Düşünme Gücü</h3>
 
             <div class="grid grid-cols-2 gap-3">
-              <!-- Şimdiye kadar -->
               <div>
-                <p class="font-sans text-xs font-bold uppercase tracking-wide text-white/50 mb-3 pb-2 border-b border-white/10">Şimdiye Kadar</p>
+                <p class="font-display text-xs font-bold uppercase tracking-wide text-white/50 mb-3 pb-2 border-b border-white/10">Şimdiye Kadar</p>
                 <ul class="space-y-2.5">
                   <li class="flex items-start gap-2 font-body text-sm text-white/70 leading-snug">
                     <span aria-hidden="true" class="flex-shrink-0 mt-1 text-white/30"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
@@ -464,10 +553,8 @@
                   </li>
                 </ul>
               </div>
-
-              <!-- YZ çağında -->
               <div>
-                <p class="font-sans text-xs font-bold uppercase tracking-wide text-mint-100 mb-3 pb-2 border-b border-mint-100/30">YZ Çağında</p>
+                <p class="font-display text-xs font-bold uppercase tracking-wide text-mint-100 mb-3 pb-2 border-b border-mint-100/30">YZ Çağında</p>
                 <ul class="space-y-2.5">
                   <li class="flex items-start gap-2 font-body text-sm text-white font-medium leading-snug">
                     <span aria-hidden="true" class="flex-shrink-0 mt-1 text-mint-100"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></span>
@@ -489,20 +576,19 @@
               </div>
             </div>
 
-            <p class="mt-6 pt-5 border-t border-white/10 font-sans italic text-sm text-mint-100 leading-relaxed font-semibold">
+            <p class="mt-6 pt-5 border-t border-white/10 font-display italic text-sm text-mint-100 leading-relaxed font-semibold">
               YZ çağında, lojik düşünme yeteneği rekabet gücünün kaynağıdır.
             </p>
           </div>
 
-          <!-- Kolon C — McKinsey 2019 + Gallup 2013 gerçek kaynaklı (PDF s.4 birebir) -->
+          <!-- Kolon C — McKinsey 2019 + Gallup 2013 -->
           <div class="bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-7">
-            <p class="font-sans text-xs font-bold uppercase tracking-widest text-mint-100 mb-4">Kolon C · Ölçülen Etki</p>
-            <h3 class="font-sans font-bold text-xl text-white mb-5">İnsan Kaynağı Yatırımının Getirisi</h3>
+            <p class="eyelet text-mint-100 mb-4">Kolon C · Ölçülen Etki</p>
+            <h3 class="font-display font-bold text-xl text-white mb-5">İnsan Kaynağı Yatırımının Getirisi</h3>
 
             <ul class="space-y-5">
-              <!-- McKinsey 2019 — Sürdürülebilir Büyüme -->
               <li class="bg-ink-900 border border-brand-green/30 rounded-xl p-5">
-                <p class="font-sans text-xs font-bold uppercase tracking-wide text-mint-100 mb-3">Sürdürülebilir Büyüme</p>
+                <p class="eyelet text-mint-100 mb-3">Sürdürülebilir Büyüme</p>
                 <p class="font-body text-base text-white leading-relaxed mb-3">
                   İnsan kaynağına stratejik yatırım yapan şirketler, rakiplerine kıyasla <strong class="text-mint-100">daha güçlü ve uzun vadeli büyüme</strong> elde eder.
                 </p>
@@ -510,12 +596,10 @@
                   Kaynak: McKinsey &amp; Company — <em>"The value of getting human capital right"</em> (2019)
                 </p>
               </li>
-
-              <!-- Gallup 2013 — %23 kârlılık -->
               <li class="bg-ink-900 border border-brand-green/30 rounded-xl p-5">
-                <p class="font-sans text-xs font-bold uppercase tracking-wide text-mint-100 mb-3">Yetenekli Çalışanların Etkisi</p>
+                <p class="eyelet text-mint-100 mb-3">Yetenekli Çalışanların Etkisi</p>
                 <div class="flex items-baseline gap-3 mb-2">
-                  <span class="font-sans font-extrabold text-5xl text-mint-100 leading-none">%23</span>
+                  <span class="font-display font-extrabold text-5xl text-mint-100 leading-none">%23</span>
                   <span class="font-body text-sm text-white/80">daha yüksek kârlılık</span>
                 </div>
                 <p class="font-body text-base text-white leading-relaxed mb-3">
@@ -529,49 +613,47 @@
           </div>
         </div>
 
-        <p class="mt-12 max-w-4xl mx-auto text-center font-sans font-semibold text-base lg:text-lg text-mint-100 leading-relaxed reveal-on-scroll">
+        <p class="mt-12 max-w-4xl mx-auto text-center font-display font-semibold text-base lg:text-lg text-mint-100 leading-relaxed reveal-on-scroll" data-reveal>
           İnsan kaynağına yapılan yatırım, bir maliyet değil — şirket değerini maksimuma taşıyan yatırımdır.
         </p>
       </div>
     </section>
 
-    <!-- ===== BLOK 5 — GLOBIS Manifesto + 4 Growth Steps ===== -->
-    <section id="manifesto" aria-labelledby="manifesto-h2" class="bg-white py-14 lg:py-24">
+    <!-- ============================================================ -->
+    <!-- BLOK 7 — MANIFESTO + 4 Growth Steps (Hamle 7 — birleşik)       -->
+    <!-- Section title: "Bu Duvarı Aşmanın Anahtarı: Mantıksal Düşünme" -->
+    <!-- ============================================================ -->
+    <section id="manifesto" aria-labelledby="manifesto-h2" class="bg-bg-canvas py-14 lg:py-24">
       <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
-        <!-- Manifesto -->
+
         <div class="max-w-4xl mx-auto text-center mb-14">
-          <p class="font-sans text-xs lg:text-sm font-bold uppercase tracking-widest text-brand-green-dark reveal-on-scroll">
+          <p class="eyelet text-brand-green-dark reveal-on-scroll" data-reveal>
             GLOBIS Tezi · Manifesto
           </p>
-          <h2 id="manifesto-h2" class="mt-4 font-sans font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll leading-tight">
-            Tüm büyüme, <span class="text-brand-green-dark">mantıksal düşünmeden</span> başlar ve tüm organizasyona yayılır.
+          <h2 id="manifesto-h2" class="mt-4 font-display font-bold text-3xl lg:text-6xl text-ink-900 text-balance leading-[1.05] tracking-[-0.02em] reveal-on-scroll" data-reveal>
+            Bu Duvarı Aşmanın Anahtarı: <span class="text-brand-green-dark">Mantıksal Düşünme.</span>
           </h2>
-          <p class="mt-6 font-sans text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll">
+          <p class="mt-6 font-body text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll" data-reveal>
             Gakken, sürdürülebilir büyüme için 4 büyüme adımı tanımlar. Her adım bir öncekinin üzerine inşa olur.
           </p>
         </div>
 
         <!-- 4 Growth Steps -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto reveal-on-scroll">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto reveal-on-scroll" data-reveal>
 
-          <!-- Step 01 — vurgulu (yeşil kutu — LP odağı) -->
           <article class="relative bg-brand-green-dark text-white rounded-2xl p-6 lg:p-7 shadow-cta">
-            <span class="absolute -top-3 left-6 inline-flex items-center px-3 py-1 rounded-full bg-mint-100 text-brand-green-dark font-sans text-xs font-bold uppercase tracking-wide">Bu LP'nin Odağı</span>
-            <p class="font-sans font-extrabold text-4xl text-mint-100 mt-2">01</p>
-            <h3 class="mt-2 font-sans font-bold text-xl">Net Düşün</h3>
+            <span class="absolute -top-3 left-6 inline-flex items-center px-3 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">Bu LP'nin Odağı</span>
+            <p class="font-display font-extrabold text-4xl text-mint-100 mt-2">01</p>
+            <h3 class="mt-2 font-display font-bold text-xl">Net Düşün</h3>
             <p class="mt-1 font-body italic text-sm text-mint-100">Think Clearly</p>
             <p class="mt-3 font-body text-sm text-white/90 leading-relaxed">
               Doğru düşün, çekirdeğe netlik getir.
             </p>
-            <span aria-hidden="true" class="absolute bottom-5 right-5 text-mint-100/40">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/></svg>
-            </span>
           </article>
 
-          <!-- Step 02 -->
-          <article class="bg-ink-100 text-ink-700 rounded-2xl p-6 lg:p-7 border border-ink-300">
-            <p class="font-sans font-extrabold text-4xl text-ink-300">02</p>
-            <h3 class="mt-2 font-sans font-bold text-xl text-ink-900">Birlikte Çalış</h3>
+          <article class="bg-white text-ink-700 rounded-2xl p-6 lg:p-7 border border-ink-300/60">
+            <p class="font-display font-extrabold text-4xl text-ink-300">02</p>
+            <h3 class="mt-2 font-display font-bold text-xl text-ink-900">Birlikte Çalış</h3>
             <p class="mt-1 font-body italic text-sm text-ink-500">Work Together</p>
             <p class="mt-3 font-body text-sm leading-relaxed">
               Hizalan, sonuç için işbirliği yap.
@@ -579,10 +661,9 @@
             <p class="mt-3 inline-flex items-center gap-1 font-body text-xs text-ink-500 italic">Sonraki faz</p>
           </article>
 
-          <!-- Step 03 -->
-          <article class="bg-ink-100 text-ink-700 rounded-2xl p-6 lg:p-7 border border-ink-300">
-            <p class="font-sans font-extrabold text-4xl text-ink-300">03</p>
-            <h3 class="mt-2 font-sans font-bold text-xl text-ink-900">İnsanı Geliştir</h3>
+          <article class="bg-white text-ink-700 rounded-2xl p-6 lg:p-7 border border-ink-300/60">
+            <p class="font-display font-extrabold text-4xl text-ink-300">03</p>
+            <h3 class="mt-2 font-display font-bold text-xl text-ink-900">İnsanı Geliştir</h3>
             <p class="mt-1 font-body italic text-sm text-ink-500">Develop People</p>
             <p class="mt-3 font-body text-sm leading-relaxed">
               İnsanları geliştir, organizasyonu yönetecek güç oluştur.
@@ -590,10 +671,9 @@
             <p class="mt-3 inline-flex items-center gap-1 font-body text-xs text-ink-500 italic">Sonraki faz</p>
           </article>
 
-          <!-- Step 04 -->
-          <article class="bg-ink-100 text-ink-700 rounded-2xl p-6 lg:p-7 border border-ink-300">
-            <p class="font-sans font-extrabold text-4xl text-ink-300">04</p>
-            <h3 class="mt-2 font-sans font-bold text-xl text-ink-900">Değişimi Yönet</h3>
+          <article class="bg-white text-ink-700 rounded-2xl p-6 lg:p-7 border border-ink-300/60">
+            <p class="font-display font-extrabold text-4xl text-ink-300">04</p>
+            <h3 class="mt-2 font-display font-bold text-xl text-ink-900">Değişimi Yönet</h3>
             <p class="mt-1 font-body italic text-sm text-ink-500">Drive Change</p>
             <p class="mt-3 font-body text-sm leading-relaxed">
               Değişimi yönet, geleceği yarat.
@@ -603,98 +683,96 @@
         </div>
 
         <!-- Alt yeşil banner -->
-        <div class="mt-12 max-w-5xl mx-auto bg-mint-50 border-l-4 border-brand-green-dark rounded-r-xl p-6 lg:p-8 reveal-on-scroll">
-          <p class="font-sans italic text-base lg:text-lg text-ink-900 leading-relaxed">
+        <div class="mt-12 max-w-5xl mx-auto bg-mint-50 border-l-4 border-brand-green-dark rounded-r-xl p-6 lg:p-8 reveal-on-scroll" data-reveal>
+          <p class="font-display italic text-base lg:text-lg text-ink-900 leading-relaxed">
             "Logical thinking is the starting point of all growth — and the key to maximizing organizational results."
           </p>
-          <p class="mt-3 font-sans font-semibold text-base lg:text-lg text-brand-green-dark leading-relaxed">
+          <p class="mt-3 font-display font-semibold text-base lg:text-lg text-brand-green-dark leading-relaxed">
             Mantıksal düşünme, tüm büyümenin başlangıç noktasıdır — ve organizasyonel sonuçları maksimize etmenin anahtarıdır.
           </p>
         </div>
 
-        <!-- F1: "Neden Gakken" vurgu satırı (Sales script Slide 9 mesajı) -->
-        <p class="mt-10 max-w-4xl mx-auto text-center font-sans text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll">
+        <p class="mt-10 max-w-4xl mx-auto text-center font-body text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll" data-reveal>
           Gakken yalnızca eğitim vermez — davranış verilerini ölçer, analiz eder ve organizasyonun bir sonraki gelişim alanını birlikte belirler.
         </p>
       </div>
     </section>
 
-    <!-- ===== BLOK 6 — Before/After Görsel Senaryolar ===== -->
-    <section id="before-after" aria-labelledby="before-after-h2" class="bg-mint-50 py-14 lg:py-24">
+    <!-- ============================================================ -->
+    <!-- BLOK 8 — Before/After Görsel Senaryolar                        -->
+    <!-- ============================================================ -->
+    <section id="before-after" aria-labelledby="before-after-h2" class="bg-white py-14 lg:py-24">
       <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-4xl mx-auto text-center mb-14">
-          <h2 id="before-after-h2" class="font-sans font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll">
+          <h2 id="before-after-h2" class="font-display font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll" data-reveal>
             Logical Thinking'i <span class="text-brand-green-dark">Somut Görelim</span>
           </h2>
-          <p class="mt-5 font-sans text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll">
+          <p class="mt-5 font-body text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll" data-reveal>
             Eğitimle değişen 3 günlük iş senaryosu — düşünme tekniği uygulanmadan önce ve sonra.
           </p>
         </div>
 
-        <div class="space-y-5 lg:space-y-6 max-w-6xl mx-auto reveal-on-scroll">
+        <div class="space-y-5 lg:space-y-6 max-w-6xl mx-auto reveal-on-scroll" data-reveal>
 
           <!-- Senaryo 1 — MECE -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
-            <!-- Before -->
-            <article class="lg:col-span-5 bg-white border-2 border-danger/40 rounded-xl p-5 lg:p-6 relative">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-sans text-xs font-bold uppercase tracking-wide">Önce</span>
-              <p class="mt-3 font-sans font-semibold text-lg text-ink-900 leading-snug">60dk toplantı, karar yok</p>
+            <article class="lg:col-span-5 bg-bg-paper border-2 border-danger/40 rounded-xl p-5 lg:p-6 relative">
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-display text-xs font-bold uppercase tracking-wide">Önce</span>
+              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">60dk toplantı, karar yok</p>
               <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Konu dağılır, herkes farklı boyutu konuşur. Toplantı uzar, aksiyon çıkmaz.</p>
             </article>
-            <!-- Teknik -->
             <article class="lg:col-span-2 bg-brand-green-dark text-white rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center text-center">
               <span aria-hidden="true" class="text-mint-100 mb-2">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
               </span>
-              <p class="font-sans font-bold text-lg leading-tight">MECE</p>
+              <p class="font-display font-bold text-lg leading-tight">MECE</p>
               <p class="mt-1 font-body italic text-xs text-mint-100 leading-snug">Mutually Exclusive,<br>Collectively Exhaustive</p>
             </article>
-            <!-- After -->
-            <article class="lg:col-span-5 bg-white border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-sans text-xs font-bold uppercase tracking-wide">Sonra</span>
-              <p class="mt-3 font-sans font-semibold text-lg text-ink-900 leading-snug">30dk net karar</p>
+            <article class="lg:col-span-5 bg-mint-50 border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">Sonra</span>
+              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">30dk net karar</p>
               <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Konu kapsamlı + örtüşmesiz parçalara bölünür. Her madde sırayla kapanır, aksiyon yazılır.</p>
             </article>
           </div>
 
           <!-- Senaryo 2 — Pyramid Structure -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
-            <article class="lg:col-span-5 bg-white border-2 border-danger/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-sans text-xs font-bold uppercase tracking-wide">Önce</span>
-              <p class="mt-3 font-sans font-semibold text-lg text-ink-900 leading-snug">Karışık problem, herkes farklı yorum</p>
+            <article class="lg:col-span-5 bg-bg-paper border-2 border-danger/40 rounded-xl p-5 lg:p-6">
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-display text-xs font-bold uppercase tracking-wide">Önce</span>
+              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">Karışık problem, herkes farklı yorum</p>
               <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Ekibin her üyesi farklı boyuta odaklanır. Birleşik resim yok.</p>
             </article>
             <article class="lg:col-span-2 bg-brand-green-dark text-white rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center text-center">
               <span aria-hidden="true" class="text-mint-100 mb-2">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20L12 2 2 22z"/><path d="M7 14h10M9 18h6"/></svg>
               </span>
-              <p class="font-sans font-bold text-lg leading-tight">Pyramid</p>
+              <p class="font-display font-bold text-lg leading-tight">Pyramid</p>
               <p class="mt-1 font-body italic text-xs text-mint-100 leading-snug">Pyramid<br>Structure</p>
             </article>
-            <article class="lg:col-span-5 bg-white border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-sans text-xs font-bold uppercase tracking-wide">Sonra</span>
-              <p class="mt-3 font-sans font-semibold text-lg text-ink-900 leading-snug">Ortak resim</p>
+            <article class="lg:col-span-5 bg-mint-50 border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">Sonra</span>
+              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">Ortak resim</p>
               <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Üstte tek sonuç, altında destekleyici argümanlar. Herkes aynı yapıyı görür.</p>
             </article>
           </div>
 
           <!-- Senaryo 3 — Hipotez-Bazlı Analiz -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
-            <article class="lg:col-span-5 bg-white border-2 border-danger/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-sans text-xs font-bold uppercase tracking-wide">Önce</span>
-              <p class="mt-3 font-sans font-semibold text-lg text-ink-900 leading-snug">Departman çatışması</p>
+            <article class="lg:col-span-5 bg-bg-paper border-2 border-danger/40 rounded-xl p-5 lg:p-6">
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-display text-xs font-bold uppercase tracking-wide">Önce</span>
+              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">Departman çatışması</p>
               <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Pazarlama "X yapalım" der, Satış "Y" der. Karar veri yerine kişiye bağlı.</p>
             </article>
             <article class="lg:col-span-2 bg-brand-green-dark text-white rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center text-center">
               <span aria-hidden="true" class="text-mint-100 mb-2">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 11h6M12 8v6"/></svg>
               </span>
-              <p class="font-sans font-bold text-lg leading-tight">Hipotez</p>
+              <p class="font-display font-bold text-lg leading-tight">Hipotez</p>
               <p class="mt-1 font-body italic text-xs text-mint-100 leading-snug">Hypothesis-<br>Based Analysis</p>
             </article>
-            <article class="lg:col-span-5 bg-white border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-sans text-xs font-bold uppercase tracking-wide">Sonra</span>
-              <p class="mt-3 font-sans font-semibold text-lg text-ink-900 leading-snug">Ortak zemin</p>
+            <article class="lg:col-span-5 bg-mint-50 border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">Sonra</span>
+              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">Ortak zemin</p>
               <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Önce hipotez yazılır, sonra veri kontrol edilir. Çatışma kişisel olmaktan çıkar.</p>
             </article>
           </div>
@@ -702,24 +780,28 @@
       </div>
     </section>
 
-    <!-- ===== BLOK 7 — Program İçeriği + Kimler İçin (Split Layout) ===== -->
-    <section id="program" aria-labelledby="program-h2" class="bg-white py-14 lg:py-24">
+    <!-- ============================================================ -->
+    <!-- BLOK 9 — Program İçeriği + Kimler İçin                         -->
+    <!-- Section title: "3 Saatlik Yoğunlaştırılmış Program"            -->
+    <!-- ============================================================ -->
+    <section id="program" aria-labelledby="program-h2" class="bg-bg-canvas py-14 lg:py-24">
       <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-4xl mx-auto text-center mb-12">
-          <h2 id="program-h2" class="font-sans font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll">
-            Program <span class="text-brand-green-dark">İçeriği</span>
+          <p class="eyelet text-brand-green-dark reveal-on-scroll" data-reveal>Program Detayları</p>
+          <h2 id="program-h2" class="mt-3 font-display font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll" data-reveal>
+            3 Saatlik Yoğunlaştırılmış Program — <span class="text-brand-green-dark">Mantıksal düşünmenin özünü deneyimleyin</span>
           </h2>
-          <p class="mt-5 font-sans text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll">
-            3 saatlik online uygulama. 15 kişi/oturum. Her katılımcıya ayrı katılım sertifikası.
+          <p class="mt-5 font-body text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll" data-reveal>
+            15 kişi/oturum. Her katılımcıya ayrı katılım sertifikası.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 reveal-on-scroll">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 reveal-on-scroll" data-reveal>
 
           <!-- Sol — Müfredat -->
-          <div class="lg:col-span-7 bg-mint-50 rounded-2xl p-7 lg:p-9 border border-mint-100">
-            <p class="font-sans text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-3">Müfredat</p>
-            <h3 class="font-sans font-bold text-2xl text-ink-900 mb-6">Step 01 — Net Düşün</h3>
+          <div class="lg:col-span-7 bg-bg-paper rounded-2xl p-7 lg:p-9">
+            <p class="eyelet text-brand-green-dark mb-3">Müfredat</p>
+            <h3 class="font-display font-bold text-2xl text-ink-900 mb-6">Step 01 — Net Düşün</h3>
 
             <ul class="space-y-3">
               <li class="flex items-start gap-3 font-body text-base text-ink-900">
@@ -753,7 +835,7 @@
             </ul>
 
             <!-- Meta rozetler -->
-            <ul class="flex flex-wrap gap-3 mt-7 pt-7 border-t border-mint-100">
+            <ul class="flex flex-wrap gap-3 mt-7 pt-7 border-t border-ink-300/60">
               <li class="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full font-body text-sm text-ink-700 border border-ink-300">
                 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>3 saat online
               </li>
@@ -765,11 +847,11 @@
               </li>
             </ul>
 
-            <!-- Eğitmen mini-blok (İrem 2026-05-13 talimatı: Mr. Serkut) -->
-            <div class="mt-7 pt-7 border-t border-mint-100 flex items-start gap-4">
+            <!-- Eğitmen mini-blok -->
+            <div class="mt-7 pt-7 border-t border-ink-300/60 flex items-start gap-4">
               <img src="assets/portraits/serkut-kizanlikli.jpg" alt="M. Serkut Kızanlıklı portresi" width="56" height="56" loading="lazy" class="flex-shrink-0 w-14 h-14 rounded-full object-cover">
               <div>
-                <p class="font-sans font-semibold text-base text-ink-900">M. Serkut Kızanlıklı</p>
+                <p class="font-display font-semibold text-base text-ink-900">M. Serkut Kızanlıklı</p>
                 <p class="font-body text-sm text-ink-700 leading-relaxed mt-0.5">Gakken Turkey baş eğitmen · ICF PCC + EMCC Senior Practitioner Mentor · 27 ülke deneyim</p>
               </div>
             </div>
@@ -777,8 +859,8 @@
 
           <!-- Sağ — Kimler İçin -->
           <div class="lg:col-span-5">
-            <p class="font-sans text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-3">Role Taxonomy</p>
-            <h3 class="font-sans font-bold text-2xl text-ink-900 mb-6">Bu Program Kimler İçin?</h3>
+            <p class="eyelet text-brand-green-dark mb-3">Role Taxonomy</p>
+            <h3 class="font-display font-bold text-2xl text-ink-900 mb-6">Bu Program Kimler İçin?</h3>
 
             <ul class="space-y-4">
               <li class="flex items-start gap-4 bg-white border border-ink-300 rounded-xl p-5 shadow-card">
@@ -786,7 +868,7 @@
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                 </span>
                 <div>
-                  <p class="font-sans font-semibold text-base text-ink-900">Üst Yönetim</p>
+                  <p class="font-display font-semibold text-base text-ink-900">Üst Yönetim</p>
                   <p class="font-body text-xs italic text-ink-500">Executive · Top Management — Stratejik Seviye</p>
                   <p class="mt-1 font-body text-sm text-ink-700">Stratejik kararlar</p>
                 </div>
@@ -796,7 +878,7 @@
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                 </span>
                 <div>
-                  <p class="font-sans font-semibold text-base text-ink-900">Yöneticiler</p>
+                  <p class="font-display font-semibold text-base text-ink-900">Yöneticiler</p>
                   <p class="font-body text-xs italic text-ink-500">Managers — Operasyonel Seviye</p>
                   <p class="mt-1 font-body text-sm text-ink-700">Departman yönetimi</p>
                 </div>
@@ -806,7 +888,7 @@
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </span>
                 <div>
-                  <p class="font-sans font-semibold text-base text-ink-900">Takım Liderleri</p>
+                  <p class="font-display font-semibold text-base text-ink-900">Takım Liderleri</p>
                   <p class="font-body text-xs italic text-ink-500">Team Leaders — Takım Liderliği Seviyesi</p>
                   <p class="mt-1 font-body text-sm text-ink-700">Ekip yönetimi</p>
                 </div>
@@ -816,7 +898,7 @@
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                 </span>
                 <div>
-                  <p class="font-sans font-semibold text-base text-ink-900">Genel Personel</p>
+                  <p class="font-display font-semibold text-base text-ink-900">Genel Personel</p>
                   <p class="font-body text-xs italic text-ink-500">General Staff — Uygulama Seviyesi</p>
                   <p class="mt-1 font-body text-sm text-ink-700">Günlük işlerde</p>
                 </div>
@@ -827,18 +909,19 @@
       </div>
     </section>
 
-    <!-- ===== BLOK 8 — Testimonials (3 Katılımcı) ===== -->
-    <section id="yorumlar" aria-labelledby="yorumlar-h2" class="bg-mint-50 py-14 lg:py-24">
+    <!-- ============================================================ -->
+    <!-- BLOK 10 — Testimonials                                          -->
+    <!-- ============================================================ -->
+    <section id="yorumlar" aria-labelledby="yorumlar-h2" class="bg-bg-paper py-14 lg:py-24">
       <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-3xl mx-auto text-center mb-12">
-          <h2 id="yorumlar-h2" class="font-sans font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll">
+          <h2 id="yorumlar-h2" class="font-display font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll" data-reveal>
             Katılımcılarımız <span class="text-brand-green-dark">Ne Diyor?</span>
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-on-scroll">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-on-scroll" data-reveal>
 
-          <!-- Kart 1 — Yuki Otomo (Gakken-dan gelen foto dosya adı esas alındı 2026-05-13) -->
           <article class="bg-white rounded-2xl p-6 lg:p-7 shadow-card flex flex-col">
             <span aria-hidden="true" class="text-brand-green-dark mb-4">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
@@ -849,13 +932,12 @@
             <div class="mt-6 pt-5 border-t border-ink-300 flex items-center gap-4">
               <img src="assets/portraits/yuki-otomo.jpg" alt="Yuki Otomo portresi" width="48" height="48" loading="lazy" class="flex-shrink-0 w-12 h-12 rounded-full object-cover">
               <div>
-                <p class="font-sans font-semibold text-base text-ink-900">Yuki Otomo</p>
+                <p class="font-display font-semibold text-base text-ink-900">Yuki Otomo</p>
                 <p class="font-body text-sm text-ink-500">CEO · YANMAR Türkiye</p>
               </div>
             </div>
           </article>
 
-          <!-- Kart 2 — Tuğçe Uyanık (Gakken-dan gelen foto dosya adı esas alındı 2026-05-13) -->
           <article class="bg-white rounded-2xl p-6 lg:p-7 shadow-card flex flex-col">
             <span aria-hidden="true" class="text-brand-green-dark mb-4">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
@@ -866,13 +948,12 @@
             <div class="mt-6 pt-5 border-t border-ink-300 flex items-center gap-4">
               <img src="assets/portraits/tugce-uyanik.jpg" alt="Tuğçe Uyanık portresi" width="48" height="48" loading="lazy" class="flex-shrink-0 w-12 h-12 rounded-full object-cover">
               <div>
-                <p class="font-sans font-semibold text-base text-ink-900">Tuğçe Uyanık</p>
+                <p class="font-display font-semibold text-base text-ink-900">Tuğçe Uyanık</p>
                 <p class="font-body text-sm text-ink-500">Management Systems Group Manager · YANMAR Türkiye</p>
               </div>
             </div>
           </article>
 
-          <!-- Kart 3 — Ramazan Uğur -->
           <article class="bg-white rounded-2xl p-6 lg:p-7 shadow-card flex flex-col">
             <span aria-hidden="true" class="text-brand-green-dark mb-4">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
@@ -883,7 +964,7 @@
             <div class="mt-6 pt-5 border-t border-ink-300 flex items-center gap-4">
               <img src="assets/portraits/ramazan-ugur.jpg" alt="Ramazan Uğur portresi" width="48" height="48" loading="lazy" class="flex-shrink-0 w-12 h-12 rounded-full object-cover">
               <div>
-                <p class="font-sans font-semibold text-base text-ink-900">Ramazan Uğur</p>
+                <p class="font-display font-semibold text-base text-ink-900">Ramazan Uğur</p>
                 <p class="font-body text-sm text-ink-500">İşe Alım ve Eğitim Kıdemli Sorumlusu · Dunlop Türkiye</p>
               </div>
             </div>
@@ -892,145 +973,105 @@
       </div>
     </section>
 
-    <!-- ===== BLOK 9 — Logo Wall (10 Kurum) ===== -->
-    <section id="logolar" aria-labelledby="logolar-h2" class="bg-white py-14 lg:py-20">
+    <!-- ============================================================ -->
+    <!-- BLOK 11 — Logo Wall Full Grid                                  -->
+    <!-- Section title rafine: alt-text "Türkiye ve global pazarlarda"  -->
+    <!-- ============================================================ -->
+    <section id="logo-wall" aria-labelledby="logo-wall-h2" class="bg-white py-14 lg:py-20">
       <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-3xl mx-auto text-center mb-10">
-          <h2 id="logolar-h2" class="font-sans font-bold text-2xl lg:text-4xl text-ink-900 text-balance reveal-on-scroll">
+          <h2 id="logo-wall-h2" class="font-display font-bold text-2xl lg:text-4xl text-ink-900 text-balance reveal-on-scroll" data-reveal>
             Dünyanın Lider Şirketleri <span class="text-brand-green-dark">Güveniyor</span>
           </h2>
+          <p class="mt-3 font-body text-base text-ink-500 reveal-on-scroll" data-reveal>
+            Türkiye ve global pazarlarda
+          </p>
         </div>
 
-        <ul class="logo-wall grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 reveal-on-scroll" aria-label="Partner kurumlar">
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/sumitomo.svg" alt="Sumitomo" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/yanmar.svg" alt="Yanmar" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/marubeni.svg" alt="Marubeni" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/dunlop.svg" alt="Dunlop" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/hms.svg" alt="HMS" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/smc.svg" alt="SMC" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/mitsubishi.svg" alt="Mitsubishi" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/artience.svg" alt="Artience" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/anadolu-isuzu.svg" alt="Anadolu ISUZU" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
-          <li class="flex items-center justify-center bg-ink-100 rounded-xl p-5 h-20 lg:h-24">
-            <img src="assets/logos/wall/nisshun-seifun.svg" alt="Nisshun Seifun" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity">
-          </li>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 reveal-on-scroll" data-reveal aria-label="Partner kurumlar">
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/sumitomo.svg" alt="Sumitomo" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/yanmar.svg" alt="Yanmar" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/marubeni.svg" alt="Marubeni" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/dunlop.svg" alt="Dunlop" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/hms.svg" alt="HMS" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/smc.svg" alt="SMC" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/mitsubishi.svg" alt="Mitsubishi" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/artience.svg" alt="Artience" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/anadolu-isuzu.svg" alt="Anadolu ISUZU" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
+          <li class="flex items-center justify-center bg-bg-paper rounded-xl p-5 h-20 lg:h-24"><img src="assets/logos/wall/nisshun-seifun.svg" alt="Nisshun Seifun" width="120" height="40" class="max-h-full w-auto opacity-70 hover:opacity-100 transition-opacity"></li>
         </ul>
       </div>
     </section>
 
-    <!-- ===== BLOK 10 — Case Study: Yanmar Turkey ===== -->
-    <section id="vaka" aria-labelledby="vaka-h2" class="bg-mint-50 py-14 lg:py-24">
+    <!-- ============================================================ -->
+    <!-- BLOK 12 — CASE: Yanmar Turkey                                  -->
+    <!-- Section title rafine: "Yanmar Turkey: Aynı Çerçevede Düşünen"  -->
+    <!-- ============================================================ -->
+    <section id="case" aria-labelledby="case-h2" class="bg-bg-canvas py-14 lg:py-24">
       <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-4xl mx-auto text-center mb-12">
-          <p class="font-sans text-xs lg:text-sm font-bold uppercase tracking-widest text-brand-green-dark reveal-on-scroll">
-            Uygulama Örneği · Vaka 1
+          <p class="eyelet text-brand-green-dark reveal-on-scroll" data-reveal>
+            Uygulama Örneği · Vaka
           </p>
-          <h2 id="vaka-h2" class="mt-4 font-sans font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll">
-            Ortak "Düşünme Biçimi" <span class="text-brand-green-dark">Organizasyonu Dönüştürdü.</span>
+          <h2 id="case-h2" class="mt-3 font-display font-bold text-3xl lg:text-5xl text-ink-900 text-balance leading-tight reveal-on-scroll" data-reveal>
+            Yanmar Turkey: <span class="text-brand-green-dark">Aynı Çerçevede Düşünen Bir Organizasyon</span>
           </h2>
-          <p class="mt-4 font-sans text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll">
-            <strong>YANMAR Türkiye Örneği</strong> — Mantıksal düşünme, her seviyede bir düşünme biçimi haline geldi. Türkiye'ye özgü, küresel standartlarda bir eğitim programı hayata geçirdik.
+          <p class="mt-4 font-body text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll" data-reveal>
+            Mantıksal düşünme, her seviyede bir düşünme biçimi haline geldi. Türkiye'ye özgü, küresel standartlarda bir eğitim programı hayata geçirdik.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 max-w-6xl mx-auto reveal-on-scroll">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 max-w-6xl mx-auto reveal-on-scroll" data-reveal>
 
           <!-- Sol — Görsel + Before/After mini grid -->
           <div class="lg:col-span-6 space-y-5">
-            <div class="aspect-[16/10] rounded-2xl overflow-hidden shadow-card bg-ink-100">
+            <div class="aspect-[16/10] rounded-2xl overflow-hidden shadow-card bg-bg-paper">
               <img src="assets/cases/yanmar/yanmar-hero-conversation.webp"
                    alt="Yanmar Turkey Mantıksal Düşünme eğitimi — sınıf ortamı"
                    width="1280" height="800" loading="lazy"
                    class="w-full h-full object-cover">
             </div>
 
-            <!-- Meta -->
             <ul class="flex flex-wrap gap-3">
               <li class="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full font-body text-sm text-ink-700 border border-ink-300">Program: Mantıksal Düşünme</li>
               <li class="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full font-body text-sm text-ink-700 border border-ink-300">20 kişilik pilot</li>
               <li class="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full font-body text-sm text-ink-700 border border-ink-300">11 günlük ek program</li>
             </ul>
 
-            <!-- Before/After mini grid — Gakken official vaka slaytı 2026-05-13 birebir -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <!-- Uygulama Öncesi -->
               <div class="bg-white rounded-2xl p-5 shadow-card border-t-4 border-ink-300">
-                <p class="font-sans text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Uygulama Öncesi</p>
+                <p class="eyelet text-ink-500 mb-3">Uygulama Öncesi</p>
                 <ul class="space-y-2.5">
-                  <li class="flex items-start gap-2 font-body text-sm text-ink-700 leading-snug">
-                    <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-                    Problemleri yapılandırmak zaman alıyordu
-                  </li>
-                  <li class="flex items-start gap-2 font-body text-sm text-ink-700 leading-snug">
-                    <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-                    Toplantılar verimsiz ilerliyordu
-                  </li>
-                  <li class="flex items-start gap-2 font-body text-sm text-ink-700 leading-snug">
-                    <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-                    Birimler arası anlayış eksikliği vardı
-                  </li>
-                  <li class="flex items-start gap-2 font-body text-sm text-ink-700 leading-snug">
-                    <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-                    Karar alma süreçleri uzuyordu
-                  </li>
+                  <li class="flex items-start gap-2 font-body text-sm text-ink-700 leading-snug"><span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>Problemleri yapılandırmak zaman alıyordu</li>
+                  <li class="flex items-start gap-2 font-body text-sm text-ink-700 leading-snug"><span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>Toplantılar verimsiz ilerliyordu</li>
+                  <li class="flex items-start gap-2 font-body text-sm text-ink-700 leading-snug"><span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>Birimler arası anlayış eksikliği vardı</li>
+                  <li class="flex items-start gap-2 font-body text-sm text-ink-700 leading-snug"><span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>Karar alma süreçleri uzuyordu</li>
                 </ul>
               </div>
-
-              <!-- Uygulama Sonrası -->
               <div class="bg-mint-50 rounded-2xl p-5 shadow-card border-t-4 border-brand-green-dark">
-                <p class="font-sans text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-3">Uygulama Sonrası</p>
+                <p class="eyelet text-brand-green-dark mb-3">Uygulama Sonrası</p>
                 <ul class="space-y-2.5">
-                  <li class="flex items-start gap-2 font-body text-sm text-ink-900 leading-snug">
-                    <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-brand-green-dark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    Ortak bir çerçevede tartışmalar yapılabilir hale geldi
-                  </li>
-                  <li class="flex items-start gap-2 font-body text-sm text-ink-900 leading-snug">
-                    <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-brand-green-dark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    Karar alma hızı arttı
-                  </li>
-                  <li class="flex items-start gap-2 font-body text-sm text-ink-900 leading-snug">
-                    <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-brand-green-dark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    Mantıklı düşünme kültürü yerleşti
-                  </li>
-                  <li class="flex items-start gap-2 font-body text-sm text-ink-900 leading-snug">
-                    <span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-brand-green-dark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    İş kalitesi ve verimlilik arttı
-                  </li>
+                  <li class="flex items-start gap-2 font-body text-sm text-ink-900 leading-snug"><span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-brand-green-dark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>Ortak bir çerçevede tartışmalar yapılabilir hale geldi</li>
+                  <li class="flex items-start gap-2 font-body text-sm text-ink-900 leading-snug"><span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-brand-green-dark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>Karar alma hızı arttı</li>
+                  <li class="flex items-start gap-2 font-body text-sm text-ink-900 leading-snug"><span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-brand-green-dark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>Mantıklı düşünme kültürü yerleşti</li>
+                  <li class="flex items-start gap-2 font-body text-sm text-ink-900 leading-snug"><span aria-hidden="true" class="flex-shrink-0 mt-0.5 text-brand-green-dark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>İş kalitesi ve verimlilik arttı</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Sağ — Büyük pull quote + atıf -->
+          <!-- Sağ — Büyük pull quote -->
           <div class="lg:col-span-6 flex flex-col justify-center bg-white rounded-2xl p-7 lg:p-9 shadow-card">
             <span aria-hidden="true" class="text-brand-green-dark mb-5">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
             </span>
-            <blockquote class="font-sans font-semibold text-xl lg:text-2xl text-ink-900 leading-snug">
+            <blockquote class="font-display font-semibold text-xl lg:text-2xl text-ink-900 leading-snug">
               Mantıksal düşünme sayesinde ortak bir dil oluşturduk. Bu sayede, farklı departmanlardaki çalışanlarımızın iletişimi iyileşti ve daha etkili iş sonuçlarına ulaşmamızı sağladı.
             </blockquote>
             <div class="mt-7 pt-5 border-t border-ink-300 flex items-center gap-4">
               <img src="assets/portraits/yuki-otomo.jpg" alt="Yuki Otomo portresi" width="56" height="56" loading="lazy" class="flex-shrink-0 w-14 h-14 rounded-full object-cover">
               <div>
-                <p class="font-sans font-semibold text-base text-ink-900">Yuki Otomo</p>
+                <p class="font-display font-semibold text-base text-ink-900">Yuki Otomo</p>
                 <p class="font-body text-sm text-ink-500">CEO · YANMAR Türkiye Makine A.Ş.</p>
               </div>
             </div>
@@ -1039,90 +1080,97 @@
       </div>
     </section>
 
-    <!-- ===== BLOK 11 — ROI Outcome Strip + Final CTA ===== -->
-    <section id="kayit" aria-labelledby="kayit-h2" class="relative bg-ink-900 text-white pt-14 lg:pt-24 pb-14 lg:pb-24 overflow-hidden">
+    <!-- ============================================================ -->
+    <!-- BLOK 13 — KAYIT (Hamle 9 — CTA-01 dramatic + footer urgency)   -->
+    <!-- ============================================================ -->
+    <section id="kayit" aria-labelledby="kayit-h2" class="relative text-white pt-14 lg:pt-24 pb-14 lg:pb-24 overflow-hidden">
 
-      <!-- Dramatic background gradient (sinematik dağ/güneş silüeti yerine multi-stop gradient) -->
-      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-ink-900 via-brand-green-dark/40 to-ink-900"></div>
-      <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-900 via-brand-green-dark/20 to-transparent"></div>
+      <!-- Dramatic background — CTA-01 photo + brand overlay -->
+      <picture>
+        <source media="(min-width:1280px)" srcset="assets/cta-1920.webp" type="image/webp">
+        <source media="(min-width:640px)"  srcset="assets/cta-1280.webp" type="image/webp">
+        <source srcset="assets/cta-640.webp" type="image/webp">
+        <img src="assets/cta-1280.jpg" alt="" class="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" decoding="async">
+      </picture>
+      <!-- Brand-green-dark + ink overlay -->
+      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-ink-900/85 via-brand-green-dark/60 to-ink-900/90 z-[1]"></div>
+      <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-900 via-ink-900/40 to-transparent z-[1]"></div>
 
-      <div class="relative max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="relative max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 z-[2]">
 
-        <!-- Üst — 5 Outcome Strip -->
+        <!-- Üst — Footer urgency (Hamle 9) -->
+        <p class="footer-urgency max-w-3xl mx-auto text-center font-display font-semibold text-xl lg:text-2xl text-white leading-relaxed mb-10 lg:mb-14 reveal-on-scroll" data-reveal>
+          Türkiye'nin önde gelen şirketleri bu programı kullanmaya başladı.
+          <strong class="text-mint-100 block mt-1">Şirketiniz için planlayalım.</strong>
+        </p>
+
+        <!-- 5 Outcome Strip -->
         <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
-          <p class="font-sans text-xs lg:text-sm font-bold uppercase tracking-widest text-mint-100 reveal-on-scroll">
-            5 Outcome
-          </p>
-          <h2 class="mt-4 font-sans font-bold text-3xl lg:text-4xl text-white text-balance reveal-on-scroll">
+          <p class="eyelet text-mint-100 reveal-on-scroll" data-reveal>5 Outcome</p>
+          <h2 class="mt-3 font-display font-bold text-2xl lg:text-4xl text-white text-balance reveal-on-scroll" data-reveal>
             İnsan Yatırımı, <span class="text-mint-100">Kurumsal Değeri Artırır</span>
           </h2>
-          <p class="mt-4 font-sans text-base text-white/80 reveal-on-scroll">
-            Mantıksal düşünme kültürünün 5 somut kurumsal sonucu.
-          </p>
         </div>
 
-        <ul class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5 max-w-6xl mx-auto mb-16 lg:mb-24 reveal-on-scroll">
-          <li class="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+        <ul class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5 max-w-6xl mx-auto mb-16 lg:mb-24 reveal-on-scroll" data-reveal>
+          <li class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-5 text-center">
             <span aria-hidden="true" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-green text-white mb-3">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg>
             </span>
-            <p class="font-sans font-bold text-sm lg:text-base text-white leading-tight">Artan Satış ve Kâr</p>
+            <p class="font-display font-bold text-sm lg:text-base text-white leading-tight">Artan Satış ve Kâr</p>
             <p class="mt-1 font-body italic text-xs text-white/60 leading-tight">Improved Sales &amp; Profit</p>
           </li>
-          <li class="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <li class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-5 text-center">
             <span aria-hidden="true" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-green text-white mb-3">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             </span>
-            <p class="font-sans font-bold text-sm lg:text-base text-white leading-tight">Yükselen Kârlılık</p>
+            <p class="font-display font-bold text-sm lg:text-base text-white leading-tight">Yükselen Kârlılık</p>
             <p class="mt-1 font-body italic text-xs text-white/60 leading-tight">Enhanced Profitability</p>
           </li>
-          <li class="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <li class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-5 text-center">
             <span aria-hidden="true" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-green text-white mb-3">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 11h6"/></svg>
             </span>
-            <p class="font-sans font-bold text-sm lg:text-base text-white leading-tight">Güçlü İnsan ve Kültür</p>
+            <p class="font-display font-bold text-sm lg:text-base text-white leading-tight">Güçlü İnsan ve Kültür</p>
             <p class="mt-1 font-body italic text-xs text-white/60 leading-tight">Stronger People &amp; Culture</p>
           </li>
-          <li class="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <li class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-5 text-center">
             <span aria-hidden="true" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-green text-white mb-3">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </span>
-            <p class="font-sans font-bold text-sm lg:text-base text-white leading-tight">Azalan Risk</p>
+            <p class="font-display font-bold text-sm lg:text-base text-white leading-tight">Azalan Risk</p>
             <p class="mt-1 font-body italic text-xs text-white/60 leading-tight">Reduced Risk</p>
           </li>
-          <li class="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+          <li class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-5 text-center">
             <span aria-hidden="true" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-green text-white mb-3">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
             </span>
-            <p class="font-sans font-bold text-sm lg:text-base text-white leading-tight">Yüksek Kurumsal Değer</p>
+            <p class="font-display font-bold text-sm lg:text-base text-white leading-tight">Yüksek Kurumsal Değer</p>
             <p class="mt-1 font-body italic text-xs text-white/60 leading-tight">Higher Corporate Value</p>
           </li>
         </ul>
 
-        <!-- Alt — Final CTA (dramatic) + Form -->
+        <!-- Alt — Final CTA + Form -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start max-w-6xl mx-auto">
 
-          <!-- Sol — başlık + scarcity -->
-          <div class="lg:col-span-7 space-y-6 reveal-on-scroll">
-            <h2 id="kayit-h2" class="font-sans font-bold text-3xl lg:text-5xl text-white text-balance leading-tight">
+          <div class="lg:col-span-7 space-y-6 reveal-on-scroll" data-reveal>
+            <h2 id="kayit-h2" class="font-display font-bold text-3xl lg:text-5xl text-white text-balance leading-tight tracking-[-0.01em]">
               Düşünme Şeklinizi Değiştirin, <br class="hidden lg:block"><span class="text-mint-100">Organizasyonunuzun Geleceğini Şekillendirin.</span>
             </h2>
-            <p class="font-sans text-base lg:text-lg text-white/85 leading-relaxed">
+            <p class="font-body text-base lg:text-lg text-white/90 leading-relaxed">
               Türkiye'de İlk ve Tek Logical Thinking programı için bilgi alın. Kontenjan sınırlı.
             </p>
 
-            <!-- Scarcity rozet -->
-            <div class="bg-white/5 border border-mint-100/30 rounded-xl p-5 flex items-start gap-4 backdrop-blur-sm">
+            <div class="bg-white/10 backdrop-blur-md border border-mint-100/30 rounded-xl p-5 flex items-start gap-4">
               <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-green text-white flex items-center justify-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 11h6"/></svg>
               </span>
               <div>
-                <h3 class="font-sans font-bold text-white mb-1">Kontenjan sınırlı — yer ayırtın</h3>
-                <p class="font-body text-sm text-white/80 leading-relaxed">Her oturum 15 kişi ile sınırlıdır. 1 iş günü içinde geri dönüş.</p>
+                <h3 class="font-display font-bold text-white mb-1">Kontenjan sınırlı — yer ayırtın</h3>
+                <p class="font-body text-sm text-white/85 leading-relaxed">Her oturum 15 kişi ile sınırlıdır. 1 iş günü içinde geri dönüş.</p>
               </div>
             </div>
 
-            <!-- Trust bullet'lar -->
             <ul class="space-y-2.5 pt-3">
               <li class="flex items-center gap-3 font-body text-base text-white"><svg aria-hidden="true" class="text-mint-100 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Türkiye'de İlk ve Tek</li>
               <li class="flex items-center gap-3 font-body text-base text-white"><svg aria-hidden="true" class="text-mint-100 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Her katılımcıya ayrı katılım sertifikası</li>
@@ -1130,9 +1178,9 @@
             </ul>
           </div>
 
-          <!-- Sağ — FORM (light card kontrast) -->
-          <div class="lg:col-span-5 bg-white rounded-2xl shadow-modal p-6 lg:p-8 reveal-on-scroll">
-            <h3 class="font-sans font-bold text-2xl text-ink-900 mb-2">Programa Başvur</h3>
+          <!-- Sağ — FORM -->
+          <div class="lg:col-span-5 bg-white rounded-2xl shadow-modal p-6 lg:p-8 reveal-on-scroll" data-reveal>
+            <h3 class="font-display font-bold text-2xl text-ink-900 mb-2">Bilgi İste</h3>
             <p class="font-body text-sm text-ink-500 mb-6">Formu doldurun, eğitim danışmanımız 1 iş günü içinde sizinle iletişime geçsin.</p>
 
             <form id="lead-form-inline" data-form="lead" data-source="section-kayit-inline"
@@ -1140,7 +1188,6 @@
                   method="POST" novalidate
                   class="space-y-5">
 
-              <!-- Honeypot -->
               <div class="hidden" aria-hidden="true">
                 <label>Web sitesi <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
               </div>
@@ -1173,8 +1220,8 @@
                 <p id="lead-kvkk-error" class="form-error" role="alert"></p>
               </div>
 
-              <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark disabled:bg-ink-300 disabled:cursor-not-allowed text-white font-sans font-semibold text-lg px-6 py-4 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[52px]">
-                <span data-state="idle">Programa Başvur</span>
+              <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark disabled:bg-ink-300 disabled:cursor-not-allowed text-white font-display font-semibold text-lg px-6 py-4 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[52px]">
+                <span data-state="idle">Bilgi İste</span>
                 <span data-state="loading" class="hidden">Gönderiliyor...</span>
               </button>
 
@@ -1190,7 +1237,7 @@
 
   </main>
 
-  <!-- ===== Footer (minimal) ===== -->
+  <!-- ===== Footer ===== -->
   <footer class="bg-ink-900 text-white py-10 lg:py-14 border-t border-white/10">
     <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-12">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -1202,12 +1249,12 @@
           </address>
         </div>
         <div class="space-y-2 font-body text-sm text-white/70">
-          <h3 class="font-sans font-semibold text-white mb-3">İletişim</h3>
+          <h3 class="font-display font-semibold text-white mb-3">İletişim</h3>
           <p><a href="mailto:info@gakkenturkey.com" class="hover:text-white underline-offset-2 hover:underline">info@gakkenturkey.com</a></p>
           <p><a href="tel:+905312237540" class="hover:text-white underline-offset-2 hover:underline">+90 531 223 75 40</a></p>
         </div>
         <div class="space-y-3">
-          <h3 class="font-sans font-semibold text-white mb-3">Takip Edin</h3>
+          <h3 class="font-display font-semibold text-white mb-3">Takip Edin</h3>
           <ul class="flex gap-3">
             <li><a href="https://www.linkedin.com/company/gakkenturkey" rel="noopener" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-brand-green transition-colors" aria-label="LinkedIn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
             <li><a href="https://www.instagram.com/gakkenacademy/" rel="noopener" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-brand-green transition-colors" aria-label="Instagram Gakken Academy"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a></li>
@@ -1224,7 +1271,7 @@
     </div>
   </footer>
 
-  <!-- ===== Lead Form Modal ===== -->
+  <!-- ===== Lead Form Modal (CTA wording: Bilgi İste) ===== -->
   <div id="lead-form-modal" class="modal hidden fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-labelledby="lead-form-modal-title" aria-hidden="true">
     <div class="modal-backdrop absolute inset-0 bg-black/55 opacity-0 transition-opacity duration-300 ease-out-soft" data-action="close-modal"></div>
     <div class="relative h-full flex items-center justify-center p-4 overflow-y-auto">
@@ -1232,7 +1279,7 @@
         <button type="button" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full text-ink-700 hover:bg-ink-100 hover:text-ink-900 transition-colors" data-action="close-modal" aria-label="Pencereyi kapat">
           <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
         </button>
-        <h2 id="lead-form-modal-title" class="font-sans text-2xl font-semibold text-ink-900 mb-2">Bilgi Alın</h2>
+        <h2 id="lead-form-modal-title" class="font-display text-2xl font-semibold text-ink-900 mb-2">Bilgi İste</h2>
         <p class="font-body text-base text-ink-500 mb-6">Formu doldurun, eğitim danışmanımız 1 iş günü içinde sizinle iletişime geçsin.</p>
 
         <form data-form="lead" data-source="modal"
@@ -1269,8 +1316,8 @@
             <p id="modal-lead-kvkk-error" class="form-error" role="alert"></p>
           </div>
 
-          <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark disabled:bg-ink-300 disabled:cursor-not-allowed text-white font-sans font-semibold text-lg px-6 py-3 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[48px]">
-            <span data-state="idle">Gönder</span>
+          <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark disabled:bg-ink-300 disabled:cursor-not-allowed text-white font-display font-semibold text-lg px-6 py-3 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[48px]">
+            <span data-state="idle">Bilgi İste</span>
             <span data-state="loading" class="hidden">Gönderiliyor...</span>
           </button>
 
@@ -1288,14 +1335,14 @@
         <div aria-hidden="true" class="w-16 h-16 mx-auto mb-5 rounded-full bg-mint-100 flex items-center justify-center">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#057f44" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
         </div>
-        <h2 id="thank-you-title" class="font-sans text-2xl font-semibold text-ink-900 mb-3">Talebiniz ulaştı.</h2>
+        <h2 id="thank-you-title" class="font-display text-2xl font-semibold text-ink-900 mb-3">Talebiniz ulaştı.</h2>
         <p class="font-body text-base text-ink-700 leading-relaxed mb-6">
           Gakken Turkey eğitim danışmanınız 1 iş günü içinde sizinle iletişime geçecek. Bu süreçte sorularınız varsa <a href="mailto:info@gakkenturkey.com" class="text-brand-green-dark underline">info@gakkenturkey.com</a> adresinden bize ulaşabilirsiniz.
         </p>
         <p class="font-body text-sm text-ink-500 italic mb-6">
           Türkiye'de İlk ve Tek Logical Thinking programına hoş geldiniz.
         </p>
-        <button type="button" class="bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold px-8 py-3 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[44px]" data-action="close-modal">Tamam</button>
+        <button type="button" class="bg-brand-green hover:bg-brand-green-dark text-white font-display font-semibold px-8 py-3 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[44px]" data-action="close-modal">Tamam</button>
       </div>
     </div>
   </div>
@@ -1308,7 +1355,7 @@
         <button type="button" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full text-ink-700 hover:bg-ink-100 hover:text-ink-900 transition-colors" data-action="close-modal" aria-label="Pencereyi kapat">
           <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
         </button>
-        <h2 id="kvkk-title" class="font-sans text-2xl font-semibold text-ink-900 mb-4">KVKK Aydınlatma Metni</h2>
+        <h2 id="kvkk-title" class="font-display text-2xl font-semibold text-ink-900 mb-4">KVKK Aydınlatma Metni</h2>
 
         <div class="font-body text-base text-ink-900 leading-relaxed space-y-4">
           <p><strong>1. Veri Sorumlusu</strong></p>
@@ -1336,10 +1383,10 @@
     </div>
   </div>
 
-  <!-- ===== Sticky Mobile CTA ===== -->
-  <div id="sticky-mobile-cta" class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t border-ink-300 shadow-[0_-4px_16px_-2px_rgba(0,0,0,0.08)] p-3 safe-bottom" role="region" aria-label="Hızlı erişim — kayıt bölümüne git">
-    <button type="button" class="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-sans font-semibold text-base px-6 py-3 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[44px]" data-action="open-modal" data-modal="lead-form-modal" data-source="sticky-mobile" aria-haspopup="dialog">
-      Bilgi Al — Kontenjan Sınırlı
+  <!-- ===== Sticky Mobile CTA (Hamle 8 wording) ===== -->
+  <div id="sticky-mobile-cta" class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t border-ink-300 shadow-[0_-4px_16px_-2px_rgba(0,0,0,0.08)] p-3 safe-bottom" role="region" aria-label="Hızlı erişim — bilgi formu">
+    <button type="button" class="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-display font-semibold text-base px-6 py-3 rounded-xl shadow-cta transition-colors duration-150 ease-out-soft min-h-[44px]" data-action="open-modal" data-modal="lead-form-modal" data-source="sticky-mobile" aria-haspopup="dialog">
+      Bilgi İste — Kontenjan Sınırlı
     </button>
   </div>
 
@@ -1350,5 +1397,39 @@
   <script defer src="scripts/form.js"></script>
   <script defer src="scripts/reveal.js"></script>
   <script defer src="scripts/sticky-cta.js"></script>
+
+  <!-- ===== Hamle 10 — GSAP ScrollTrigger init (CDN yüklendikten sonra) ===== -->
+  <script>
+    window.addEventListener('load', function () {
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return; // fallback: CSS Ken Burns + IntersectionObserver reveal
+      try {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Ken Burns scroll-scrub (CSS keyframe override)
+        var heroBg = document.querySelector('.hero-kenburns');
+        if (heroBg) {
+          heroBg.style.animation = 'none';   // CSS keyframe iptal, GSAP devral
+          gsap.fromTo(heroBg,
+            { scale: 1.0 },
+            { scale: 1.15, ease: 'none',
+              scrollTrigger: {
+                trigger: '#hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 0.5
+              }
+            });
+        }
+
+        // Section fade-up reveal (data-reveal)
+        gsap.utils.toArray('[data-reveal]').forEach(function (el) {
+          gsap.from(el, {
+            y: 50, opacity: 0, duration: 0.9, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' }
+          });
+        });
+      } catch (e) { /* sessizce CSS fallback'e dön */ }
+    });
+  </script>
 </body>
 </html>

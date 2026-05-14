@@ -96,19 +96,7 @@ body.is-modal-open {
   outline-offset: 2px;
 }
 
-/* ---- Sticky header + scroll-margin-top (anchor menü için zorunlu)
-   Header yüksekliği: mobile ~64px, desktop ~72px → scroll hedef section
-   altına gizlenmesin diye scroll-margin-top tüm anchor section'larda. */
-:where(#hero, #growth-wall, #why-wall, #global-std, #neden-gt, #gt-program,
-       #degisim, #vaka-logo, #format, #form-section) {
-  scroll-margin-top: 72px;
-}
-@media (max-width: 1023px) {
-  :where(#hero, #growth-wall, #why-wall, #global-std, #neden-gt, #gt-program,
-         #degisim, #vaka-logo, #format, #form-section) {
-    scroll-margin-top: 64px;
-  }
-}
+/* (Eski v3 anchor scroll-margin liste v4 refactor'da silindi — yeni liste dosya sonunda) */
 
 /* ---- Mobile drawer açık state ---- */
 #mobile-menu.is-open {
@@ -233,3 +221,80 @@ html { scroll-behavior: smooth; }
   50% { opacity: 0.6; }
 }
 .is-loading { animation: pulse-soft 1.2s ease-in-out infinite; }
+
+/* ---- v4 surgical refactor (2026-05-14) — Konsey v2 onaylı ----
+   Hamle 3: Hero Ken Burns CSS-only fallback (GSAP olmazsa hep çalışır)
+   Hamle 4: Logo Marquee sonsuz loop + mask-image gradient
+   Hamle 6: Video container cinematic shadow + rounded
+   Hamle 7: Section title eyelet (eyelet rozet utility class) */
+
+/* Hero Ken Burns — CSS-only fallback (GSAP scroll-scrub Hamle 10'da bunu override eder) */
+.hero-kenburns {
+  animation: kenBurns 22s ease-in-out infinite alternate;
+  transform-origin: center 35%;
+}
+@keyframes kenBurns {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-kenburns { animation: none; }
+}
+
+/* Logo Marquee — sonsuz loop + edge mask */
+.marquee-mask {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.marquee-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  align-items: center;
+  animation: marqueeScroll 50s linear infinite;
+  will-change: transform;
+}
+.marquee-track:hover { animation-play-state: paused; }
+.marquee-track > * { flex: 0 0 auto; }
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* Video container — Loom-tarzı cinematic shadow */
+.shadow-cinematic {
+  box-shadow:
+    0 30px 60px -20px rgba(11, 26, 18, 0.30),
+    0 10px 25px -15px rgba(11, 26, 18, 0.20);
+}
+
+/* Section eyelet utility — TÜRKİYE'DE İLK VE TEK gibi small uppercase başlıklar */
+.eyelet {
+  font-family: var(--font-display, 'Inter Tight'), 'Poppins', system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* GSAP fade-up reveal target — JS yüklenmezse data-reveal default visible kalır */
+[data-reveal] { will-change: opacity, transform; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* Section anchor scroll-margin-top — yeni v4 anchor isimleri (eski liste değiştirildi) */
+:where(#hero, #logo-marquee, #pain, #video-section, #manifesto,
+       #data, #program, #yorumlar, #case, #logo-wall, #kayit) {
+  scroll-margin-top: 72px;
+}
+@media (max-width: 1023px) {
+  :where(#hero, #logo-marquee, #pain, #video-section, #manifesto,
+         #data, #program, #yorumlar, #case, #logo-wall, #kayit) {
+    scroll-margin-top: 64px;
+  }
+}
