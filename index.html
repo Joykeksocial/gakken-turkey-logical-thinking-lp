@@ -1398,17 +1398,24 @@
   <script defer src="scripts/reveal.js"></script>
   <script defer src="scripts/sticky-cta.js"></script>
 
-  <!-- ===== Hamle 10 — GSAP ScrollTrigger init (CDN yüklendikten sonra) ===== -->
+  <!-- ===== Hamle 10 — GSAP ScrollTrigger init (CDN yüklendikten sonra)
+       NOT (2026-05-14 hotfix): data-reveal fade-up bloğu kaldırıldı.
+       gsap.from() element'i başlangıçta opacity:0'a set ediyor; ScrollTrigger
+       trigger position hesaplaması race condition'da fail edince elementler
+       sonsuza kadar görünmez kalıyordu (İrem 2026-05-14 raporu: "banner sonrası
+       boş"). Sadece Hero Ken Burns scroll-scrub korunur; aşağı section'lar
+       default visible + mevcut .reveal-on-scroll IntersectionObserver pattern'i
+       (custom.css + scripts/reveal.js) güvenli fade-up sağlar. ===== -->
   <script>
     window.addEventListener('load', function () {
-      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return; // fallback: CSS Ken Burns + IntersectionObserver reveal
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
       try {
         gsap.registerPlugin(ScrollTrigger);
 
         // Hero Ken Burns scroll-scrub (CSS keyframe override)
         var heroBg = document.querySelector('.hero-kenburns');
         if (heroBg) {
-          heroBg.style.animation = 'none';   // CSS keyframe iptal, GSAP devral
+          heroBg.style.animation = 'none';
           gsap.fromTo(heroBg,
             { scale: 1.0 },
             { scale: 1.15, ease: 'none',
@@ -1420,14 +1427,6 @@
               }
             });
         }
-
-        // Section fade-up reveal (data-reveal)
-        gsap.utils.toArray('[data-reveal]').forEach(function (el) {
-          gsap.from(el, {
-            y: 50, opacity: 0, duration: 0.9, ease: 'power2.out',
-            scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' }
-          });
-        });
       } catch (e) { /* sessizce CSS fallback'e dön */ }
     });
   </script>
