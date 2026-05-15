@@ -38,3 +38,6 @@ v3-*.png
 
 # Hero original (1920x1282 hi-res — sadece WebP/JPG variants commit edilir)
 assets/hero-original.jpg
+
+# AI generation iterations (fal.ai render outputs, brief Section 6 onayı sonrası finalize)
+_archive/

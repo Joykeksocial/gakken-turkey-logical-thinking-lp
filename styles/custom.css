@@ -287,6 +287,34 @@ html { scroll-behavior: smooth; }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
 }
 
+/* ---- v5 Premium Refinement (2026-05-15) — Pain section dark mode (Mimar Tur 5 R1a) ----
+   Seki Bey Round 2: "still very difficult to understand visually, message not landing".
+   Çözüm Hibrit C (Yunus C-1): dark mode bandı + AI illustration. */
+.pain-card-dark {
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  transition: background var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out);
+}
+.pain-card-dark:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(146, 232, 132, 0.30);
+}
+.pain-card-dark h3 { color: white; }
+.pain-card-dark p  { color: rgba(255, 255, 255, 0.72); }
+.pain-card-dark .pain-icon {
+  flex-shrink: 0;
+  width: 3rem; height: 3rem;
+  background: rgba(146, 232, 132, 0.12);
+  border-radius: 0.75rem;
+  display: grid; place-items: center;
+  color: #92E884;
+}
+
 /* Section anchor scroll-margin-top — yeni v4 anchor isimleri (eski liste değiştirildi) */
 :where(#hero, #logo-marquee, #pain, #video-section, #manifesto,
        #data, #program, #yorumlar, #case, #logo-wall, #kayit) {

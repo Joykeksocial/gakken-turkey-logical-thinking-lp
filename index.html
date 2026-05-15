@@ -70,6 +70,7 @@
             'bg-canvas': '#FAF7F2',
             'bg-paper':  '#F2EDE4',
             'accent-gold': '#C3A35F',
+            'ink-pain':  '#0F1B2D',
             error: '#c52a2a',
             danger: '#c52a2a'
           },
@@ -272,117 +273,87 @@
     <section id="pain" aria-labelledby="pain-h2" class="bg-bg-canvas py-14 lg:py-24">
       <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12">
 
-        <div class="relative bg-bg-paper rounded-3xl overflow-hidden p-6 sm:p-10 lg:p-14 reveal-on-scroll" data-reveal>
+        <!-- v5 dark mode (R1a) — bg-bg-paper → bg-ink-pain (#0F1B2D); subtle gradient overlay for depth -->
+        <div class="relative bg-ink-pain rounded-3xl overflow-hidden p-6 sm:p-10 lg:p-14 reveal-on-scroll" data-reveal>
+          <!-- Subtle vignette overlay (bottom emphasis — cinematic depth) -->
+          <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30 pointer-events-none"></div>
+          <div aria-hidden="true" class="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-brand-green-dark/10 to-transparent pointer-events-none"></div>
 
-          <div class="max-w-3xl mb-10 lg:mb-14">
-            <p class="eyelet text-brand-green-dark mb-3">Growth Barrier</p>
-            <h2 id="pain-h2" class="font-display font-bold text-3xl lg:text-5xl text-ink-900 leading-tight tracking-[-0.01em] text-balance">
-              Şirketinizin Görünmeyen Vergisi: <span class="text-brand-green-dark">Düşünme Tutarsızlığı</span>
+          <div class="relative max-w-3xl mb-10 lg:mb-14">
+            <p class="eyelet text-mint-100 mb-3">Growth Barrier</p>
+            <h2 id="pain-h2" class="font-display font-bold text-3xl lg:text-5xl text-white leading-tight tracking-[-0.01em] text-balance">
+              Şirketinizin Görünmeyen Vergisi: <span class="text-mint-100">Düşünme Tutarsızlığı</span>
             </h2>
-            <p class="mt-4 font-body text-base lg:text-lg text-ink-700 leading-relaxed">
+            <p class="mt-4 font-body text-base lg:text-lg text-white/80 leading-relaxed">
               Hızlı büyüyen şirketlerin önündeki engel: aynı çerçevede düşünmeyen ekipler. Toplantılar uzar, kararlar yavaşlar, departmanlar kopuk kalır.
             </p>
           </div>
 
-          <!-- Yan yana scene -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <!-- Yan yana scene (dark mode) -->
+          <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
-            <!-- SOL: 4 problem ikon kartı -->
+            <!-- SOL: 4 problem ikon kartı (pain-card-dark — custom.css subtle elevation) -->
             <ul class="space-y-4 lg:space-y-5">
-              <li class="flex items-start gap-4 bg-white rounded-2xl p-5 lg:p-6 shadow-card border border-ink-300/60">
-                <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-xl bg-mint-100 text-brand-green-dark flex items-center justify-center">
+              <li class="pain-card-dark">
+                <span aria-hidden="true" class="pain-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 </span>
                 <div>
-                  <h3 class="font-display font-semibold text-lg text-ink-900">Toplantılar Uzuyor</h3>
-                  <p class="mt-1 font-body text-sm text-ink-700 leading-relaxed">60 dakika konuşulur, karar çıkmaz. Ekip farklı boyutlardan tartışır.</p>
+                  <h3 class="font-display font-semibold text-lg">Toplantılar Uzuyor</h3>
+                  <p class="mt-1 font-body text-sm leading-relaxed">60 dakika konuşulur, karar çıkmaz. Ekip farklı boyutlardan tartışır.</p>
                 </div>
               </li>
-              <li class="flex items-start gap-4 bg-white rounded-2xl p-5 lg:p-6 shadow-card border border-ink-300/60">
-                <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-xl bg-mint-100 text-brand-green-dark flex items-center justify-center">
+              <li class="pain-card-dark">
+                <span aria-hidden="true" class="pain-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
                 </span>
                 <div>
-                  <h3 class="font-display font-semibold text-lg text-ink-900">Kararlar Yavaşlıyor</h3>
-                  <p class="mt-1 font-body text-sm text-ink-700 leading-relaxed">Hangi yöne gideceğimiz net değil. Aksiyon ertesi haftaya kalır.</p>
+                  <h3 class="font-display font-semibold text-lg">Kararlar Yavaşlıyor</h3>
+                  <p class="mt-1 font-body text-sm leading-relaxed">Hangi yöne gideceğimiz net değil. Aksiyon ertesi haftaya kalır.</p>
                 </div>
               </li>
-              <li class="flex items-start gap-4 bg-white rounded-2xl p-5 lg:p-6 shadow-card border border-ink-300/60">
-                <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-xl bg-mint-100 text-brand-green-dark flex items-center justify-center">
+              <li class="pain-card-dark">
+                <span aria-hidden="true" class="pain-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M17 11h.01M21 11h.01M17 15h.01"/></svg>
                 </span>
                 <div>
-                  <h3 class="font-display font-semibold text-lg text-ink-900">Ekipler Aynı Problemi Farklı Yorumluyor</h3>
-                  <p class="mt-1 font-body text-sm text-ink-700 leading-relaxed">Pazarlama ve Satış aynı veriden farklı sonuç çıkarır. Ortak resim yok.</p>
+                  <h3 class="font-display font-semibold text-lg">Ekipler Aynı Problemi Farklı Yorumluyor</h3>
+                  <p class="mt-1 font-body text-sm leading-relaxed">Pazarlama ve Satış aynı veriden farklı sonuç çıkarır. Ortak resim yok.</p>
                 </div>
               </li>
-              <li class="flex items-start gap-4 bg-white rounded-2xl p-5 lg:p-6 shadow-card border border-ink-300/60">
-                <span aria-hidden="true" class="flex-shrink-0 w-12 h-12 rounded-xl bg-mint-100 text-brand-green-dark flex items-center justify-center">
+              <li class="pain-card-dark">
+                <span aria-hidden="true" class="pain-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
                 </span>
                 <div>
-                  <h3 class="font-display font-semibold text-lg text-ink-900">Departmanlar Arası Kopukluk</h3>
-                  <p class="mt-1 font-body text-sm text-ink-700 leading-relaxed">Her birim kendi diliyle konuşur. Hizalanma manuel ve yorucu.</p>
+                  <h3 class="font-display font-semibold text-lg">Departmanlar Arası Kopukluk</h3>
+                  <p class="mt-1 font-body text-sm leading-relaxed">Her birim kendi diliyle konuşur. Hizalanma manuel ve yorucu.</p>
                 </div>
               </li>
             </ul>
 
-            <!-- SAĞ: Growth Barrier metafor SVG (duvar kırılışı) -->
+            <!-- SAĞ: v5 R1b Flux Pro Ultra AI illustration (Yunus V2 seçimi 2026-05-15) -->
             <figure class="lg:sticky lg:top-24">
-              <div class="relative w-full aspect-[5/6] sm:aspect-[4/5] lg:aspect-[4/5] bg-white rounded-2xl overflow-hidden border border-ink-300/60 shadow-card">
-                <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" role="img" aria-labelledby="growth-barrier-title">
-                  <title id="growth-barrier-title">Growth Barrier — tuğla duvar kırılışı, kırmızı ok yukarı yönelir</title>
-                  <defs>
-                    <pattern id="brickPattern" x="0" y="0" width="80" height="40" patternUnits="userSpaceOnUse">
-                      <rect width="80" height="40" fill="#E8E2D6"/>
-                      <path d="M0 0v40M80 0v40M0 20h80M40 0v20M0 20h40" stroke="#C9C0AC" stroke-width="1.5" fill="none"/>
-                    </pattern>
-                    <linearGradient id="shadeGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#0B1A12" stop-opacity="0.06"/>
-                      <stop offset="100%" stop-color="#0B1A12" stop-opacity="0.15"/>
-                    </linearGradient>
-                  </defs>
-
-                  <!-- Background canvas -->
-                  <rect x="0" y="0" width="400" height="500" fill="#FAF7F2"/>
-
-                  <!-- Tuğla duvar -->
-                  <rect x="0" y="0" width="400" height="500" fill="url(#brickPattern)"/>
-                  <rect x="0" y="0" width="400" height="500" fill="url(#shadeGrad)"/>
-
-                  <!-- Çatlak (organic break path) -->
-                  <path d="M200 500 L200 380 L180 360 L210 320 L185 290 L215 250 L190 215 L220 175 L195 140 L225 100 L200 70 L235 30 L210 5"
-                        stroke="#0B1A12" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-
-                  <!-- Kırılan tuğla parçaları -->
-                  <polygon points="140,180 175,165 188,210 152,225" fill="#FFFFFF" stroke="#0B1A12" stroke-width="1.5" opacity="0.92"/>
-                  <polygon points="230,140 265,125 278,170 240,185" fill="#FFFFFF" stroke="#0B1A12" stroke-width="1.5" opacity="0.92"/>
-                  <polygon points="160,280 195,265 208,310 170,325" fill="#FFFFFF" stroke="#0B1A12" stroke-width="1.5" opacity="0.92"/>
-                  <polygon points="250,330 285,315 298,360 260,375" fill="#FFFFFF" stroke="#0B1A12" stroke-width="1.5" opacity="0.92"/>
-
-                  <!-- Kırmızı yukarı yön ok -->
-                  <g>
-                    <rect x="188" y="60" width="24" height="380" fill="#C52A2A" rx="3"/>
-                    <polygon points="158,90 200,18 242,90" fill="#C52A2A"/>
-                  </g>
-
-                  <!-- Caption -->
-                  <text x="200" y="478" text-anchor="middle"
-                        font-family="'Inter Tight', Poppins, sans-serif"
-                        font-size="14" font-weight="700"
-                        fill="#0B1A12" letter-spacing="2">GROWTH BARRIER</text>
-                </svg>
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-cinematic bg-black/40">
+                <picture>
+                  <source media="(min-width:1280px)" srcset="assets/pain-illustration-1920.webp" type="image/webp">
+                  <source media="(min-width:640px)"  srcset="assets/pain-illustration-1280.webp" type="image/webp">
+                  <source srcset="assets/pain-illustration-640.webp" type="image/webp">
+                  <img src="assets/pain-illustration-1280.jpg"
+                       alt="Modern yönetici karanlık duvar önünde — duvardan altın ışık geçiyor + arkadaki aydınlık ofis çalışan ekibi gösteriyor. Growth Barrier'ı kırma görseli."
+                       class="w-full h-full object-cover" loading="lazy" decoding="async">
+                </picture>
               </div>
-              <figcaption class="mt-4 font-body italic text-sm text-ink-700 text-center max-w-md mx-auto">
-                4 problemin ortak adı: <strong class="not-italic text-ink-900">Growth Barrier</strong> — büyümenin önündeki görünmez duvar.
+              <figcaption class="mt-4 font-body italic text-sm text-white/70 text-center max-w-md mx-auto">
+                4 problemin ortak adı: <strong class="not-italic text-mint-100">Growth Barrier</strong> — büyümenin önündeki görünmez duvar.
               </figcaption>
             </figure>
 
           </div>
 
-          <!-- Closing transition -->
-          <p class="mt-12 lg:mt-16 max-w-3xl mx-auto text-center font-display italic text-lg lg:text-xl text-ink-900 leading-relaxed reveal-on-scroll" data-reveal>
-            Bu engelin tek adı vardır: <strong class="not-italic text-brand-green-dark">ortak bir düşünme dilinin eksikliği.</strong>
+          <!-- Closing transition (dark mode) -->
+          <p class="relative mt-12 lg:mt-16 max-w-3xl mx-auto text-center font-display italic text-lg lg:text-xl text-white leading-relaxed reveal-on-scroll" data-reveal>
+            Bu engelin tek adı vardır: <strong class="not-italic text-mint-100">ortak bir düşünme dilinin eksikliği.</strong>
           </p>
         </div>
 
