@@ -112,7 +112,7 @@
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-ink-300">
     <div class="max-w-page-w mx-auto px-4 sm:px-6 lg:px-12 py-3 lg:py-4 flex items-center justify-between gap-4">
       <a href="#hero" aria-label="Gakken Turkey — sayfa başına dön" class="flex-shrink-0">
-        <img src="assets/logo-gakken-turkey.svg" alt="Gakken Turkey" width="140" height="40" class="h-8 lg:h-10 w-auto">
+        <img src="assets/logo-gakken-turkey-official.png" alt="Gakken Turkey" width="146" height="40" class="h-8 lg:h-10 w-auto">
       </a>
 
       <!-- Desktop nav (lg+) — anchor map: Program · Neden Gakken · Yorumlar · Vaka · Bilgi İste -->
@@ -672,7 +672,7 @@
     <!-- ============================================================ -->
     <!-- BLOK 8 — Before/After Görsel Senaryolar                        -->
     <!-- ============================================================ -->
-    <section id="before-after" aria-labelledby="before-after-h2" class="bg-white py-14 lg:py-24">
+    <section id="before-after" aria-labelledby="before-after-h2" class="bg-bg-canvas py-14 lg:py-24">
       <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-4xl mx-auto text-center mb-14">
           <h2 id="before-after-h2" class="font-display font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll" data-reveal>
@@ -683,70 +683,234 @@
           </p>
         </div>
 
-        <div class="space-y-5 lg:space-y-6 max-w-6xl mx-auto reveal-on-scroll" data-reveal>
+        <div class="space-y-6 lg:space-y-8 max-w-6xl mx-auto reveal-on-scroll" data-reveal>
 
-          <!-- Senaryo 1 — MECE -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
-            <article class="lg:col-span-5 bg-bg-paper border-2 border-danger/40 rounded-xl p-5 lg:p-6 relative">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-display text-xs font-bold uppercase tracking-wide">Önce</span>
-              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">60dk toplantı, karar yok</p>
-              <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Konu dağılır, herkes farklı boyutu konuşur. Toplantı uzar, aksiyon çıkmaz.</p>
+          <!-- Senaryo 1 — 60dk toplantı, karar yok → 30dk net karar -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-3 items-stretch">
+            <article class="lg:col-span-5 bg-white border border-danger/30 rounded-2xl p-5 lg:p-6 shadow-card flex flex-col">
+              <div class="flex items-start gap-3">
+                <span aria-hidden="true" class="flex-shrink-0 w-9 h-9 rounded-full bg-danger/10 text-danger flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </span>
+                <div>
+                  <p class="eyelet text-danger">Önce</p>
+                  <p class="mt-1 font-display font-semibold text-lg text-ink-900 leading-snug">60dk toplantı, karar yok</p>
+                </div>
+              </div>
+              <p class="mt-3 font-body text-sm text-ink-700 leading-relaxed">Konu dağılır, herkes farklı boyutu konuşur. Toplantı uzar, aksiyon çıkmaz.</p>
+              <figure class="mt-4 bf-photo aspect-[4/3] bg-bg-paper rounded-lg overflow-hidden grayscale opacity-90">
+                <img src="assets/before-after/before-1.jpg" alt="Kaotik toplantı — herkes farklı yorum" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+              </figure>
             </article>
-            <article class="lg:col-span-2 bg-brand-green-dark text-white rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center text-center">
-              <span aria-hidden="true" class="text-mint-100 mb-2">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-              </span>
-              <p class="font-display font-bold text-lg leading-tight">MECE</p>
-              <p class="mt-1 font-body italic text-xs text-mint-100 leading-snug">Mutually Exclusive,<br>Collectively Exhaustive</p>
-            </article>
-            <article class="lg:col-span-5 bg-mint-50 border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">Sonra</span>
-              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">30dk net karar</p>
-              <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Konu kapsamlı + örtüşmesiz parçalara bölünür. Her madde sırayla kapanır, aksiyon yazılır.</p>
+            <div class="lg:col-span-2 flex items-center justify-center py-2 lg:py-0" aria-hidden="true">
+              <svg class="hidden lg:block text-ink-500" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <svg class="lg:hidden text-ink-500" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </div>
+            <article class="lg:col-span-5 bg-white border border-brand-green/40 rounded-2xl p-5 lg:p-6 shadow-card flex flex-col">
+              <div class="flex items-start gap-3">
+                <span aria-hidden="true" class="flex-shrink-0 w-9 h-9 rounded-full bg-mint-100 text-brand-green-dark flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <div>
+                  <p class="eyelet text-brand-green-dark">Sonra</p>
+                  <p class="mt-1 font-display font-semibold text-lg text-ink-900 leading-snug">30dk net karar</p>
+                </div>
+              </div>
+              <p class="mt-3 font-body text-sm text-ink-700 leading-relaxed">Konu kapsamlı + örtüşmesiz parçalara bölünür. Her madde sırayla kapanır, aksiyon yazılır.</p>
+              <figure class="mt-4 bf-photo aspect-[4/3] bg-bg-paper rounded-lg overflow-hidden">
+                <img src="assets/before-after/after-1.jpg" alt="Organize toplantı — net karar" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+              </figure>
             </article>
           </div>
 
-          <!-- Senaryo 2 — Pyramid Structure -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
-            <article class="lg:col-span-5 bg-bg-paper border-2 border-danger/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-display text-xs font-bold uppercase tracking-wide">Önce</span>
-              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">Karışık problem, herkes farklı yorum</p>
-              <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Ekibin her üyesi farklı boyuta odaklanır. Birleşik resim yok.</p>
+          <!-- Senaryo 2 — Karışık problem → Ortak resim -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-3 items-stretch">
+            <article class="lg:col-span-5 bg-white border border-danger/30 rounded-2xl p-5 lg:p-6 shadow-card flex flex-col">
+              <div class="flex items-start gap-3">
+                <span aria-hidden="true" class="flex-shrink-0 w-9 h-9 rounded-full bg-danger/10 text-danger flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </span>
+                <div>
+                  <p class="eyelet text-danger">Önce</p>
+                  <p class="mt-1 font-display font-semibold text-lg text-ink-900 leading-snug">Karışık problem, herkes farklı yorum</p>
+                </div>
+              </div>
+              <p class="mt-3 font-body text-sm text-ink-700 leading-relaxed">Ekibin her üyesi farklı boyuta odaklanır. Birleşik resim yok.</p>
+              <figure class="mt-4 bf-photo aspect-[4/3] bg-bg-paper rounded-lg overflow-hidden grayscale opacity-90">
+                <img src="assets/before-after/before-2.jpg" alt="Dağınık masa — multi-konuşma" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+              </figure>
             </article>
-            <article class="lg:col-span-2 bg-brand-green-dark text-white rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center text-center">
-              <span aria-hidden="true" class="text-mint-100 mb-2">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20L12 2 2 22z"/><path d="M7 14h10M9 18h6"/></svg>
-              </span>
-              <p class="font-display font-bold text-lg leading-tight">Pyramid</p>
-              <p class="mt-1 font-body italic text-xs text-mint-100 leading-snug">Pyramid<br>Structure</p>
-            </article>
-            <article class="lg:col-span-5 bg-mint-50 border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">Sonra</span>
-              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">Ortak resim</p>
-              <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Üstte tek sonuç, altında destekleyici argümanlar. Herkes aynı yapıyı görür.</p>
+            <div class="lg:col-span-2 flex items-center justify-center py-2 lg:py-0" aria-hidden="true">
+              <svg class="hidden lg:block text-ink-500" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <svg class="lg:hidden text-ink-500" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </div>
+            <article class="lg:col-span-5 bg-white border border-brand-green/40 rounded-2xl p-5 lg:p-6 shadow-card flex flex-col">
+              <div class="flex items-start gap-3">
+                <span aria-hidden="true" class="flex-shrink-0 w-9 h-9 rounded-full bg-mint-100 text-brand-green-dark flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <div>
+                  <p class="eyelet text-brand-green-dark">Sonra</p>
+                  <p class="mt-1 font-display font-semibold text-lg text-ink-900 leading-snug">Ortak resim</p>
+                </div>
+              </div>
+              <p class="mt-3 font-body text-sm text-ink-700 leading-relaxed">Üstte tek sonuç, altında destekleyici argümanlar. Herkes aynı yapıyı görür.</p>
+              <figure class="mt-4 bf-photo aspect-[4/3] bg-bg-paper rounded-lg overflow-hidden">
+                <img src="assets/before-after/after-2.jpg" alt="Ekip beyaz tahtada diagram — ortak resim" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+              </figure>
             </article>
           </div>
 
-          <!-- Senaryo 3 — Hipotez-Bazlı Analiz -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
-            <article class="lg:col-span-5 bg-bg-paper border-2 border-danger/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-danger/10 text-danger font-display text-xs font-bold uppercase tracking-wide">Önce</span>
-              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">Departman çatışması</p>
-              <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Pazarlama "X yapalım" der, Satış "Y" der. Karar veri yerine kişiye bağlı.</p>
+          <!-- Senaryo 3 — Departman çatışması → Ortak zemin -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-3 items-stretch">
+            <article class="lg:col-span-5 bg-white border border-danger/30 rounded-2xl p-5 lg:p-6 shadow-card flex flex-col">
+              <div class="flex items-start gap-3">
+                <span aria-hidden="true" class="flex-shrink-0 w-9 h-9 rounded-full bg-danger/10 text-danger flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </span>
+                <div>
+                  <p class="eyelet text-danger">Önce</p>
+                  <p class="mt-1 font-display font-semibold text-lg text-ink-900 leading-snug">Departman çatışması</p>
+                </div>
+              </div>
+              <p class="mt-3 font-body text-sm text-ink-700 leading-relaxed">Pazarlama "X yapalım" der, Satış "Y" der. Karar veri yerine kişiye bağlı.</p>
+              <figure class="mt-4 bf-photo aspect-[4/3] bg-bg-paper rounded-lg overflow-hidden grayscale opacity-90">
+                <img src="assets/before-after/before-3.jpg" alt="Yorgun executive — kişisel çatışma" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+              </figure>
             </article>
-            <article class="lg:col-span-2 bg-brand-green-dark text-white rounded-xl p-4 lg:p-5 flex flex-col items-center justify-center text-center">
-              <span aria-hidden="true" class="text-mint-100 mb-2">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 11h6M12 8v6"/></svg>
-              </span>
-              <p class="font-display font-bold text-lg leading-tight">Hipotez</p>
-              <p class="mt-1 font-body italic text-xs text-mint-100 leading-snug">Hypothesis-<br>Based Analysis</p>
-            </article>
-            <article class="lg:col-span-5 bg-mint-50 border-2 border-brand-green/40 rounded-xl p-5 lg:p-6">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">Sonra</span>
-              <p class="mt-3 font-display font-semibold text-lg text-ink-900 leading-snug">Ortak zemin</p>
-              <p class="mt-2 font-body text-sm text-ink-700 leading-relaxed">Önce hipotez yazılır, sonra veri kontrol edilir. Çatışma kişisel olmaktan çıkar.</p>
+            <div class="lg:col-span-2 flex items-center justify-center py-2 lg:py-0" aria-hidden="true">
+              <svg class="hidden lg:block text-ink-500" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <svg class="lg:hidden text-ink-500" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </div>
+            <article class="lg:col-span-5 bg-white border border-brand-green/40 rounded-2xl p-5 lg:p-6 shadow-card flex flex-col">
+              <div class="flex items-start gap-3">
+                <span aria-hidden="true" class="flex-shrink-0 w-9 h-9 rounded-full bg-mint-100 text-brand-green-dark flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <div>
+                  <p class="eyelet text-brand-green-dark">Sonra</p>
+                  <p class="mt-1 font-display font-semibold text-lg text-ink-900 leading-snug">Ortak zemin</p>
+                </div>
+              </div>
+              <p class="mt-3 font-body text-sm text-ink-700 leading-relaxed">Önce hipotez yazılır, sonra veri kontrol edilir. Çatışma kişisel olmaktan çıkar.</p>
+              <figure class="mt-4 bf-photo aspect-[4/3] bg-bg-paper rounded-lg overflow-hidden">
+                <img src="assets/before-after/after-3.jpg" alt="Gülümseyen ekip — collaboration" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+              </figure>
             </article>
           </div>
+
+          <!-- Sonuç banner -->
+          <div class="mt-8 lg:mt-10 bg-mint-50 border-l-4 border-brand-green-dark rounded-2xl p-6 lg:p-8 text-center shadow-card">
+            <p class="font-display font-bold text-xl lg:text-2xl text-brand-green-dark leading-snug">
+              <span aria-hidden="true" class="inline-block mr-1">📈</span>
+              Sonuç: Daha hızlı karar, daha az çatışma, daha güçlü ekip.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOK 8.5 — Yaklaşan Oturumlar (#takvim) — Round 3 R3            -->
+    <!-- Tarihler İrem onayı sonrası SLOT-1..6 placeholder'larında       -->
+    <!-- replace edilir (eyelet + zaman satırı)                          -->
+    <!-- ============================================================ -->
+    <section id="takvim" aria-labelledby="takvim-h2" class="bg-bg-paper py-14 lg:py-24">
+      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <p class="eyelet text-brand-green-dark reveal-on-scroll" data-reveal>Takvim</p>
+          <h2 id="takvim-h2" class="mt-3 font-display font-bold text-3xl lg:text-5xl text-ink-900 text-balance reveal-on-scroll" data-reveal>
+            Yaklaşan Oturumlar
+          </h2>
+          <p class="mt-5 font-body text-base lg:text-lg text-ink-700 leading-relaxed reveal-on-scroll" data-reveal>
+            3 ay boyunca, ayda 2 oturum — size uygun tarihi seçin. Kontenjan: 15 kişi/oturum.
+          </p>
+          <p class="mt-3 font-body text-sm text-ink-500 italic reveal-on-scroll" data-reveal>
+            Tarihler kısa süre içinde netleştirilecek — yerinizi şimdiden ayırın, tarih onayı ile sizi arayalım.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-5xl mx-auto reveal-on-scroll" data-reveal>
+
+          <!-- SLOT-1: AY 1 · 1. OTURUM -->
+          <article class="bg-white border border-ink-300 rounded-2xl p-6 shadow-card flex flex-col">
+            <p class="eyelet text-brand-green-dark">AY 1 · 1. OTURUM</p>
+            <p class="mt-3 font-display font-semibold text-lg text-ink-900">Tarih yakında açıklanacak</p>
+            <p class="mt-2 font-body text-sm text-ink-700">Online · Zoom</p>
+            <span class="mt-3 inline-flex items-center self-start px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">15 kişi · Sınırlı</span>
+            <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="takvim-slot-1" aria-haspopup="dialog"
+                    class="mt-5 inline-flex items-center justify-center gap-2 bg-brand-green-dark hover:bg-brand-green-dark/90 text-white font-display font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+              Yerimi Ayır
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </article>
+
+          <!-- SLOT-2: AY 1 · 2. OTURUM -->
+          <article class="bg-white border border-ink-300 rounded-2xl p-6 shadow-card flex flex-col">
+            <p class="eyelet text-brand-green-dark">AY 1 · 2. OTURUM</p>
+            <p class="mt-3 font-display font-semibold text-lg text-ink-900">Tarih yakında açıklanacak</p>
+            <p class="mt-2 font-body text-sm text-ink-700">Online · Zoom</p>
+            <span class="mt-3 inline-flex items-center self-start px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">15 kişi · Sınırlı</span>
+            <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="takvim-slot-2" aria-haspopup="dialog"
+                    class="mt-5 inline-flex items-center justify-center gap-2 bg-brand-green-dark hover:bg-brand-green-dark/90 text-white font-display font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+              Yerimi Ayır
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </article>
+
+          <!-- SLOT-3: AY 2 · 1. OTURUM -->
+          <article class="bg-white border border-ink-300 rounded-2xl p-6 shadow-card flex flex-col">
+            <p class="eyelet text-brand-green-dark">AY 2 · 1. OTURUM</p>
+            <p class="mt-3 font-display font-semibold text-lg text-ink-900">Tarih yakında açıklanacak</p>
+            <p class="mt-2 font-body text-sm text-ink-700">Online · Zoom</p>
+            <span class="mt-3 inline-flex items-center self-start px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">15 kişi · Sınırlı</span>
+            <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="takvim-slot-3" aria-haspopup="dialog"
+                    class="mt-5 inline-flex items-center justify-center gap-2 bg-brand-green-dark hover:bg-brand-green-dark/90 text-white font-display font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+              Yerimi Ayır
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </article>
+
+          <!-- SLOT-4: AY 2 · 2. OTURUM -->
+          <article class="bg-white border border-ink-300 rounded-2xl p-6 shadow-card flex flex-col">
+            <p class="eyelet text-brand-green-dark">AY 2 · 2. OTURUM</p>
+            <p class="mt-3 font-display font-semibold text-lg text-ink-900">Tarih yakında açıklanacak</p>
+            <p class="mt-2 font-body text-sm text-ink-700">Online · Zoom</p>
+            <span class="mt-3 inline-flex items-center self-start px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">15 kişi · Sınırlı</span>
+            <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="takvim-slot-4" aria-haspopup="dialog"
+                    class="mt-5 inline-flex items-center justify-center gap-2 bg-brand-green-dark hover:bg-brand-green-dark/90 text-white font-display font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+              Yerimi Ayır
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </article>
+
+          <!-- SLOT-5: AY 3 · 1. OTURUM -->
+          <article class="bg-white border border-ink-300 rounded-2xl p-6 shadow-card flex flex-col">
+            <p class="eyelet text-brand-green-dark">AY 3 · 1. OTURUM</p>
+            <p class="mt-3 font-display font-semibold text-lg text-ink-900">Tarih yakında açıklanacak</p>
+            <p class="mt-2 font-body text-sm text-ink-700">Online · Zoom</p>
+            <span class="mt-3 inline-flex items-center self-start px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">15 kişi · Sınırlı</span>
+            <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="takvim-slot-5" aria-haspopup="dialog"
+                    class="mt-5 inline-flex items-center justify-center gap-2 bg-brand-green-dark hover:bg-brand-green-dark/90 text-white font-display font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+              Yerimi Ayır
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </article>
+
+          <!-- SLOT-6: AY 3 · 2. OTURUM -->
+          <article class="bg-white border border-ink-300 rounded-2xl p-6 shadow-card flex flex-col">
+            <p class="eyelet text-brand-green-dark">AY 3 · 2. OTURUM</p>
+            <p class="mt-3 font-display font-semibold text-lg text-ink-900">Tarih yakında açıklanacak</p>
+            <p class="mt-2 font-body text-sm text-ink-700">Online · Zoom</p>
+            <span class="mt-3 inline-flex items-center self-start px-2.5 py-1 rounded-full bg-mint-100 text-brand-green-dark font-display text-xs font-bold uppercase tracking-wide">15 kişi · Sınırlı</span>
+            <button type="button" data-action="open-modal" data-modal="lead-form-modal" data-source="takvim-slot-6" aria-haspopup="dialog"
+                    class="mt-5 inline-flex items-center justify-center gap-2 bg-brand-green-dark hover:bg-brand-green-dark/90 text-white font-display font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+              Yerimi Ayır
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </article>
+
         </div>
       </div>
     </section>
@@ -836,42 +1000,38 @@
             <ul class="space-y-4">
               <li class="flex items-start gap-4 bg-white border border-ink-300 rounded-xl p-5 shadow-card">
                 <span aria-hidden="true" class="flex-shrink-0 w-11 h-11 rounded-full bg-mint-100 text-brand-green-dark flex items-center justify-center">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18"/><path d="M18 3v18"/><path d="M6 7h12"/><path d="M3 11l3-4 3 4"/><path d="M15 11l3-4 3 4"/><path d="M9 21h6"/></svg>
                 </span>
                 <div>
-                  <p class="font-display font-semibold text-base text-ink-900">Üst Yönetim</p>
-                  <p class="font-body text-xs italic text-ink-500">Executive · Top Management — Stratejik Seviye</p>
-                  <p class="mt-1 font-body text-sm text-ink-700">Stratejik kararlar</p>
+                  <p class="font-display font-semibold text-base text-ink-900">Karar verenler</p>
+                  <p class="mt-1 font-body text-sm text-ink-700">Stratejik kararlar daha hızlı + daha doğru</p>
                 </div>
               </li>
               <li class="flex items-start gap-4 bg-white border border-ink-300 rounded-xl p-5 shadow-card">
                 <span aria-hidden="true" class="flex-shrink-0 w-11 h-11 rounded-full bg-mint-100 text-brand-green-dark flex items-center justify-center">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </span>
                 <div>
-                  <p class="font-display font-semibold text-base text-ink-900">Yöneticiler</p>
-                  <p class="font-body text-xs italic text-ink-500">Managers — Operasyonel Seviye</p>
-                  <p class="mt-1 font-body text-sm text-ink-700">Departman yönetimi</p>
+                  <p class="font-display font-semibold text-base text-ink-900">Ekip yönetenler</p>
+                  <p class="mt-1 font-body text-sm text-ink-700">Ekip toplantıları + departman koordinasyonu</p>
                 </div>
               </li>
               <li class="flex items-start gap-4 bg-white border border-ink-300 rounded-xl p-5 shadow-card">
                 <span aria-hidden="true" class="flex-shrink-0 w-11 h-11 rounded-full bg-mint-100 text-brand-green-dark flex items-center justify-center">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c1 .7 1.6 1.7 1.7 2.8h4.6c.1-1.1.7-2.1 1.7-2.8A7 7 0 0 0 12 2z"/></svg>
                 </span>
                 <div>
-                  <p class="font-display font-semibold text-base text-ink-900">Takım Liderleri</p>
-                  <p class="font-body text-xs italic text-ink-500">Team Leaders — Takım Liderliği Seviyesi</p>
-                  <p class="mt-1 font-body text-sm text-ink-700">Ekip yönetimi</p>
+                  <p class="font-display font-semibold text-base text-ink-900">Problem çözenler</p>
+                  <p class="mt-1 font-body text-sm text-ink-700">Analitik düşünme + çözüm yapılandırma</p>
                 </div>
               </li>
               <li class="flex items-start gap-4 bg-white border border-ink-300 rounded-xl p-5 shadow-card">
                 <span aria-hidden="true" class="flex-shrink-0 w-11 h-11 rounded-full bg-mint-100 text-brand-green-dark flex items-center justify-center">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
                 </span>
                 <div>
-                  <p class="font-display font-semibold text-base text-ink-900">Genel Personel</p>
-                  <p class="font-body text-xs italic text-ink-500">General Staff — Uygulama Seviyesi</p>
-                  <p class="mt-1 font-body text-sm text-ink-700">Günlük işlerde</p>
+                  <p class="font-display font-semibold text-base text-ink-900">Daha hızlı büyümek isteyen profesyoneller</p>
+                  <p class="mt-1 font-body text-sm text-ink-700">Bireysel kariyer gelişim — net iletişim + güçlü karar</p>
                 </div>
               </li>
             </ul>
@@ -1213,7 +1373,7 @@
     <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-12">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div class="space-y-4">
-          <img src="assets/logo-gakken-turkey.svg" alt="Gakken Turkey" width="140" height="40" class="h-10 w-auto bg-white rounded-lg p-2">
+          <img src="assets/logo-gakken-turkey-official.png" alt="Gakken Turkey" width="146" height="40" class="h-10 w-auto bg-white rounded-lg p-2">
           <address class="font-body text-sm text-white/70 not-italic leading-relaxed">
             Alsancak Mah., Kıbrıs Şehitleri Cad. No:136/1 Kat:5<br>
             Kristal 1 İş Merkezi, Konak / İZMİR
