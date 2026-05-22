@@ -283,9 +283,8 @@ html { scroll-behavior: smooth; }
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
-}
+/* NOT: reduced-motion override KALDIRILDI (2026-05-22 Yunus dersi)
+   Brand reinforcement için marquee her durumda çalışmalı. */
 
 /* Video container — Loom-tarzı cinematic shadow */
 .shadow-cinematic {
