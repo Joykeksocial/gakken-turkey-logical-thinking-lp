@@ -1,16 +1,14 @@
-/* sticky-cta.js — Mobil sticky bottom CTA bar: Hero geçilince görün, form yakını gizlen
- * 2026-05-13 fix: Hedef #kayit (tüm Blok 11) → #lead-form-inline (sadece form).
- * Eski davranışta Blok 11 ROI Outcome strip viewport'a girer girmez sticky
- * gizleniyordu (form çok aşağıda olmasına rağmen); yeni davranışta gerçek
- * form input'u ekrana gelene kadar sticky görünür kalır. */
+/* sticky-cta.js — Hem mobile sticky bottom CTA hem desktop floating CTA (v6 Yunus 2026-05-22).
+ * Davranış: Hero çıktıktan sonra görünür, form input ekrana gelene veya footer'a kadar görünür kalır.
+ * 2026-05-13: Hedef #kayit (tüm Blok 11) → #lead-form-inline (sadece form).
+ * 2026-05-22: Desktop floating CTA #floating-cta-desktop eklendi (paralel davranış).
+ */
 (function () {
   'use strict';
 
-  const sticky = document.getElementById('sticky-mobile-cta');
-  if (!sticky) return;
-
-  // lg breakpoint (≥1024px) gizle — Tailwind lg:hidden zaten yapıyor; ek koruma
-  function isMobile() { return window.innerWidth < 1024; }
+  const stickyMobile = document.getElementById('sticky-mobile-cta');
+  const floatingDesktop = document.getElementById('floating-cta-desktop');
+  if (!stickyMobile && !floatingDesktop) return;
 
   const heroEl = document.getElementById('hero');
   const formEl = document.getElementById('lead-form-inline');
@@ -23,16 +21,21 @@
   let formVisible = false;
   let footerVisible = false;
 
+  function isLg() { return window.innerWidth >= 1024; }
+
   function update() {
-    if (!isMobile()) {
-      sticky.classList.remove('is-visible');
-      return;
+    const shouldShow = !heroVisible && !formVisible && !footerVisible;
+
+    // Mobile sticky bottom — sadece <lg ekranda göster
+    if (stickyMobile) {
+      if (shouldShow && !isLg()) stickyMobile.classList.add('is-visible');
+      else stickyMobile.classList.remove('is-visible');
     }
-    // Görünür: Hero çıkmış + form input'u henüz görünmüyor + footer da görünmüyor
-    if (!heroVisible && !formVisible && !footerVisible) {
-      sticky.classList.add('is-visible');
-    } else {
-      sticky.classList.remove('is-visible');
+
+    // Desktop floating right-bottom — sadece lg+ ekranda göster
+    if (floatingDesktop) {
+      if (shouldShow && isLg()) floatingDesktop.classList.add('is-visible');
+      else floatingDesktop.classList.remove('is-visible');
     }
   }
 

@@ -90,6 +90,30 @@ body.is-modal-open {
   transform: translateY(0);
 }
 
+/* ---- Floating Desktop CTA (v6 Yunus 2026-05-22) — sağ alt köşe scroll-following ---- */
+#floating-cta-desktop {
+  display: none;  /* mobile: gizli */
+}
+@media (min-width: 1024px) {
+  #floating-cta-desktop {
+    display: inline-flex;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 30;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity var(--duration-base) var(--ease-out),
+                transform var(--duration-base) var(--ease-out);
+  }
+  #floating-cta-desktop.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
 /* ---- Custom focus-visible (Tailwind ring yerine net renk) ---- */
 :where(button, a, input, textarea, select):focus-visible {
   outline: 2px solid var(--color-green-dark);
@@ -147,11 +171,9 @@ body.is-modal-open {
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  /* NOT: Global `*` animation-duration override KALDIRILDI (2026-05-22 Yunus dersi).
+     Logo marquee canlı kalmalı + Hero Ken Burns ayrı override altında. Spesifik animations: */
+  .hero-kenburns { animation: none; }
   .reveal-on-scroll[data-pending="true"] {
     opacity: 1 !important;
     transform: none !important;
@@ -252,7 +274,7 @@ html { scroll-behavior: smooth; }
   gap: 4rem;
   width: max-content;
   align-items: center;
-  animation: marqueeScroll 50s linear infinite;
+  animation: marqueeScroll 20s linear infinite;
   will-change: transform;
 }
 .marquee-track:hover { animation-play-state: paused; }
