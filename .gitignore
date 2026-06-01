@@ -17,6 +17,9 @@ package-lock.json
 dist/
 build/
 
+# Wix Custom Element build tooling (wix-lp.js kökte commit edilir, tooling değil)
+_build/
+
 # Secrets — Joykek root kural: .env asla commit edilmez
 .env
 .env.*
