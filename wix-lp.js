@@ -488,6 +488,45 @@
     };
   }
 
+  // Wix sabit-yukseklik fix: Wix host + ust container'lara desktop'ta sabit pixel height atiyor;
+  // icerik kisa kalinca alt bosluk olusuyor. host + 4 ata-element'i icerige gore auto'ya cevirir.
+  // inner (icerik) izlenir -> host degil (loop yok; ata height degisimi icerik height'ini etkilemez).
+  function autoFitWixHeight(host) {
+    var inner = host.querySelector('.gakken-lp');
+    if (!inner) return;
+    var scheduled = false;
+    function apply() {
+      scheduled = false;
+      var node = host;
+      for (var i = 0; i < 5 && node && node !== document.body && node !== document.documentElement; i++) {
+        node.style.setProperty('height', 'auto', 'important');
+        node.style.setProperty('min-height', '0', 'important');
+        node = node.parentElement;
+      }
+      try {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'gakken-lp-height', height: Math.ceil(inner.getBoundingClientRect().height) }, '*');
+        }
+      } catch (e) {}
+    }
+    function schedule() {
+      if (scheduled) return;
+      scheduled = true;
+      if (window.requestAnimationFrame) window.requestAnimationFrame(apply);
+      else setTimeout(apply, 16);
+    }
+    if (typeof ResizeObserver !== 'undefined') {
+      try { new ResizeObserver(schedule).observe(inner); } catch (e) {}
+    }
+    window.addEventListener('resize', schedule);
+    window.addEventListener('load', schedule);
+    schedule();
+    // Wix gec layout (sabit height'i sonradan re-apply edebilir) -> gecikmeli tekrar
+    setTimeout(schedule, 200);
+    setTimeout(schedule, 800);
+    setTimeout(schedule, 2000);
+  }
+
   // class extends HTMLElement guard'in ICINDE (poc-faz05.js canli kaniti) — HTMLElement burada tanimli.
   class GakkenLP extends HTMLElement {
     connectedCallback() {
@@ -521,6 +560,7 @@
       }
 
       patchModalScrollLock();
+      autoFitWixHeight(self);
       document.documentElement.setAttribute('data-gakken-lp', 'ready');
     }
   }
