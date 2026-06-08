@@ -488,9 +488,11 @@
     };
   }
 
-  // Wix sabit-yukseklik fix: Wix host + ust container'lara desktop'ta sabit pixel height atiyor;
-  // icerik kisa kalinca alt bosluk olusuyor. host + 4 ata-element'i icerige gore auto'ya cevirir.
-  // inner (icerik) izlenir -> host degil (loop yok; ata height degisimi icerik height'ini etkilemez).
+  // Wix sabit-boyut fix (height + width): Wix host + ust container'lara desktop'ta sabit pixel
+  // height/width (or. 1540px) atiyor; height -> icerik kisaysa alt bosluk, width -> viewport dar ise
+  // yatay tasma + alt scrollbar. host + ust ata-element'leri icerige gore auto height + max-width:100%
+  // yapar. inner (icerik) izlenir -> host degil (loop yok; ata boyut degisimi icerik boyutunu etkilemez).
+  // SADECE host'un kendi ata-zinciri (yukari) hedeflenir; icerik/asagi DEGIL -> sayfanin baska yeri bozulmaz.
   function autoFitWixHeight(host) {
     var inner = host.querySelector('.gakken-lp');
     if (!inner) return;
@@ -502,6 +504,15 @@
         node.style.setProperty('height', 'auto', 'important');
         node.style.setProperty('min-height', '0', 'important');
         node = node.parentElement;
+      }
+      // Yatay-tasma fix: host + ust ata-zincirindeki sabit genislik (or. 1540px Wix kutu) viewport'u
+      // asmasin. max-width:100% SADECE klipler (asla genisletmez): dogru boyutlu elemana no-op,
+      // tasan kutuyu parent'ina (en ust full-width ata -> viewport) kadar kucultur. 8 seviye yukari
+      // (1540px zinciri 4-5 derin; pay birakildi). Sadece ata-zincir; icerik/asagi ELLENMEZ.
+      var wnode = host;
+      for (var w = 0; w < 8 && wnode && wnode !== document.body && wnode !== document.documentElement; w++) {
+        wnode.style.setProperty('max-width', '100%', 'important');
+        wnode = wnode.parentElement;
       }
       try {
         if (window.parent && window.parent !== window) {
