@@ -65,6 +65,11 @@
 
     const formData = new FormData(form);
     const endpoint = form.getAttribute('action');
+    // n8n webhook: urlencoded gönder (simple request -> CORS preflight YOK) + source/page metadata
+    const params = new URLSearchParams();
+    formData.forEach(function (v, k) { params.append(k, v); });
+    if (!params.has('source')) params.append('source', form.dataset.source || '');
+    params.append('page', (typeof location !== 'undefined' && location.href) || '');
 
     try {
       // Eğer endpoint placeholder ise (Formspree ID henüz yok) → console.log + thank-you modal aç (smoke test için)
@@ -77,7 +82,7 @@
 
       const res = await fetch(endpoint, {
         method: 'POST',
-        body: formData,
+        body: params,
         headers: { 'Accept': 'application/json' }
       });
       if (res.ok) {
