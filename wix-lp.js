@@ -281,11 +281,11 @@
     params.append('page', (typeof location !== 'undefined' && location.href) || '');
 
     try {
-      // Eğer endpoint placeholder ise (Formspree ID henüz yok) → console.log + thank-you modal aç (smoke test için)
-      if (!endpoint || endpoint.includes('{{FORMSPREE_ID}}') || endpoint.includes('REPLACE_ME')) {
-        console.warn('[form] Formspree endpoint placeholder. Form NOT actually sent. Payload:', Object.fromEntries(formData));
-        await new Promise(function (r) { setTimeout(r, 400); });
-        onSuccess(form);
+      // GÜVENLİK: endpoint gerçek bir http(s) URL değilse (placeholder / eski-cache / hatalı embed)
+      // ASLA sessizce "teşekkürler" gösterme — görünür hata ver. Aksi halde kullanıcı "gönderdim" sanır ama mail gitmez.
+      if (!endpoint || !/^https?:\/\//i.test(endpoint) || endpoint.indexOf('{{') !== -1 || endpoint.indexOf('REPLACE_ME') !== -1) {
+        console.error('[form] Gecersiz endpoint, gonderilmedi:', endpoint);
+        showError(banner, 'Form şu anda gönderilemiyor. Lütfen info@gakkenturkey.com adresine yazın ya da birazdan tekrar deneyin.');
         return;
       }
 
