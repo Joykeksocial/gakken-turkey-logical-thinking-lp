@@ -204,6 +204,26 @@ Aşama 2 cutover sırası (project_brief.md Bağımlılık Sırası §5):
 
 ---
 
+## Yasal Alt Bant (2026-08-15)
+
+Canlı sayfa Wix'te **landingPage** modunda; bu modda Wix `#SITE_FOOTER` öğesini `display:none` yapar,
+yani sitenin kendi footer'ı (ve içindeki KVKK / Çerez linkleri) bu sayfada hiç görünmez. Bu yüzden
+telif + yasal linkler LP'nin kendi içine, `</main>` sonrasına slim bir bant olarak eklendi:
+
+- Markup: `footer.lp-legal` -> solda telif, sağda KVKK Aydınlatma Metni `|` Çerez Politikası
+- Linkler `target="_blank" rel="noopener noreferrer"` (yeni sekmede açılır)
+- Telif yılı dinamik: `scripts/legal-year.js` her açılışta `#lp-legal-year` içeriğini günceller
+- Stil: `styles/custom.css` sonundaki `.lp-legal*` blokları (wix-lp.js içinde `.gakken-lp` ön ekli kopyası)
+- Yan fayda: `sticky-cta.js` zaten `document.querySelector('footer')` izliyordu; bant eklendiği için
+  mobil sticky CTA ve masaüstü floating CTA artık bandın üstünde otomatik gizleniyor.
+
+> ⚠️ **Rebuild uyarısı:** `_build/build-wix-element.mjs` bu repoda yok (`.gitignore`) ve `wix-lp.js`
+> son 3 değişiklikte olduğu gibi elle düzenlendi. Build script'i tekrar çalıştırılırsa: (1) bant
+> `<footer>` olduğu için header/footer strip adımına takılmadığından emin ol, (2) `scripts/legal-year.js`
+> modül listesine eklenmiş olsun (index.html script sırası: modal, nav, cta, form, reveal, sticky-cta, legal-year).
+
+---
+
 ## Tarih ve Sürüm
 
 - **2026-05-11** — Kurulumcu Aşama 1 build tamamlandı (Tailwind CDN + 5 JS modülü + 18 görsel optimize + 10 logo placeholder + favicon + index.html 989 satır).

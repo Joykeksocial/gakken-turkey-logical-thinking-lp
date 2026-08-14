@@ -347,3 +347,38 @@ html { scroll-behavior: smooth; }
     scroll-margin-top: 64px;
   }
 }
+
+/* ===== Yasal alt bant — telif + KVKK + Çerez Politikası (2026-08-15) ===== */
+.lp-legal {
+  background: #0B1A12;                                /* ink-900 */
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.lp-legal-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.125rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.lp-legal-copy { margin: 0; color: rgba(255, 255, 255, 0.58); }
+.lp-legal-links { display: flex; align-items: center; gap: 0.75rem; }
+.lp-legal-links a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color 150ms ease;
+}
+.lp-legal-links a:hover { color: #FFFFFF; text-decoration: underline; }
+.lp-legal-links a:focus-visible { outline: 2px solid #92E884; outline-offset: 3px; border-radius: 2px; }
+.lp-legal-sep { color: rgba(255, 255, 255, 0.28); }
+@media (min-width: 640px)  { .lp-legal-inner { padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px) { .lp-legal-inner { padding-left: 3rem;   padding-right: 3rem;   } }
+@media (max-width: 639px) {
+  .lp-legal-inner { flex-direction: column; align-items: center; text-align: center; gap: 0.625rem; }
+}
